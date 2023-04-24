@@ -1,5 +1,6 @@
 import "./globals.css";
 import Header from "./components/Header";
+import { LanguageProvider } from "./contexts/LanguageContext";
 
 export const metadata = {
   title: "Education Consulting",
@@ -12,11 +13,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
+
     <html lang="en">
       <body>
+      <LanguageProvider >
         <Header />
         {children}
+      </LanguageProvider>
       </body>
     </html>
+
   );
 }

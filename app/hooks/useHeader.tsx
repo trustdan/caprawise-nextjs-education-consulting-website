@@ -1,22 +1,33 @@
 import { useState, useEffect } from "react";
+import { useLanguageContext } from "./useLanguageContext";
 
 export const useHeader = () => {
+
+  const context = useLanguageContext();
   const NAV_BAR_ITEMS = [
     {
-      name: "About",
-      href: "/about",
+      name: 'about',
+      href: '/about',
+      en: 'ABOUT',
+      tr: 'HAKKIMIZDA',
     },
     {
-      name: "Services",
-      href: "/services",
+      name: 'services',
+      href: '/services',
+      en: 'SERVICES',
+      tr: 'HİZMETLER',
     },
     {
-      name: "FAQ",
-      href: "/faq",
+      name: 'faq',
+      href: '/faq',
+      en: 'FAQ',
+      tr: 'SSS',
     },
     {
-      name: "Contact",
-      href: "/contact",
+      name: 'contact',
+      href: '/contact',
+      en: 'CONTACT',
+      tr: 'İLETİŞİM',
     },
   ];
 
@@ -28,5 +39,5 @@ export const useHeader = () => {
     setActiveLink(window.location.pathname);
   }, []);
 
-  return { NAV_BAR_ITEMS, activeLink, setActiveLink };
+  return { context, NAV_BAR_ITEMS, activeLink, setActiveLink };
 };
