@@ -1,8 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import hamburger from "../public/hamburger.svg";
-import hamburgerClose from "../public/hamburgerClose.svg";
 
 type HamburgerProps = {
   navBarItems: {
