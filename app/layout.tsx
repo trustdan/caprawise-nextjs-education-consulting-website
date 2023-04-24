@@ -13,7 +13,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-
     <html lang="en">
       <body>
       <LanguageProvider >
@@ -22,6 +21,5 @@ export default function RootLayout({
       </LanguageProvider>
       </body>
     </html>
-
   );
 }

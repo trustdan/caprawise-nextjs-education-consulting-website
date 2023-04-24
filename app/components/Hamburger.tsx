@@ -1,16 +1,20 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useLanguageContext } from "../hooks/useLanguageContext";
 
 type HamburgerProps = {
-  navBarItems: {
+    navBarItems: {
     name: string;
     href: string;
+    en: string;
+    tr: string;
   }[];
 };
 
 export default function Hamburger(props: HamburgerProps) {
   const [isHamburger, setIsHamburger] = useState(false);
+  const context = useLanguageContext();
 
   return (
     <div
@@ -42,7 +46,7 @@ export default function Hamburger(props: HamburgerProps) {
                 href={item.href}
                 className="block py-2 px-4 hover:bg-gray-100 border border-slate-200"
               >
-                {item.name}
+                {context.language === "en" ? item.en : item.tr}
               </Link>
             ))}
           </div>

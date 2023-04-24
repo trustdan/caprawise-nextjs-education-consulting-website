@@ -23,12 +23,13 @@ export default function Header() {
                   href={item.href}
                   className={`block h-16 border-b-4 leading-[4rem] transition ease-in-out duration-500 ${
                     activeLink === item.href
-                      ? "border-blue-500 text-red-700"
-                      : "border-transparent text-gray-500 hover:border-current hover:text-red-700"
+                      ? "border-black text-red-700"
+                      : "border-transparent text-gray-500 hover:border-gray-500 hover:text-red-700"
                   }`}
                   onClick={() => setActiveLink(item.href)}
                 >
                   {context.language === "en" ? item.en : item.tr}
+                  
                 </Link>
               ))}
             </nav>
