@@ -1,7 +1,7 @@
 'use client';
 import { createContext, useState, ReactNode } from "react";
 
-interface LanguageContextValue {
+export interface LanguageContextValue {
   language: string;
   setLanguage: (language: string) => void;
 }

@@ -1,10 +1,24 @@
 import { useLanguageContext } from "../hooks/useLanguageContext";
 import { MouseEvent, useState } from "react";
 
-export function useLanguageDropdown() {
+interface Language {
+  name: string;
+  code: string;
+}
+
+interface UseLanguageDropdownReturn {
+  context: ReturnType<typeof useLanguageContext>;
+  LANGUAGES: Language[];
+  isDropDownOpen: boolean;
+  setIsDropDownOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  handleLanguageSelection: (event: React.MouseEvent<HTMLLIElement>) => void;
+  handleOptionClick: (event: React.MouseEvent<HTMLLIElement>) => void;
+}
+
+export function useLanguageDropdown(): UseLanguageDropdownReturn {
   const context = useLanguageContext();
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
-  const LANGUAGES = [
+  const LANGUAGES: Language[] = [
     {
       name: "English",
       code: "en",
@@ -29,7 +43,7 @@ export function useLanguageDropdown() {
     console.log(language);
   };
 
-  const handleOptionClick = (event: React.MouseEvent<HTMLLIElement>) => {
+  const handleOptionClick = (event: React.MouseEvent<HTMLLIElement>): void => {
     handleLanguageSelection(event);
     setIsDropDownOpen(false);
   };
