@@ -55,7 +55,7 @@ export function useHeader(): UseHeaderReturn {
   const languageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Set active link
+    // Set active link(necessary for accessing via url with specific pathnames; e.g. .../about)
     setActiveLink(window.location.pathname);
 
     // GSAP Animations
