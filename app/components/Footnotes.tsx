@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { useLanguageContext } from '../hooks/useLanguageContext';
 

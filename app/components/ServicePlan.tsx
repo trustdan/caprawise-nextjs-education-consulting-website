@@ -1,16 +1,21 @@
+'use client'
+
+import { useLanguageContext } from "../hooks/useLanguageContext";
+
 type ServicePlanProps = {
-  name: string;
+  name: {en: string, tr: string };
   price: number;
-  description: string;
-  features: string[];
+  description: {en: string, tr: string};
+  features: {en: string, tr: string}[];
 };
 
 export default function ServicePlan({ name, price, description, features } : ServicePlanProps) {
+    const { language } = useLanguageContext();
   return (
     <div className="flex flex-col p-3 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
-      <h3 className="mb-4 text-2xl font-semibold">{name}</h3>
+      <h3 className="mb-4 text-2xl font-semibold">{language === "en" ? name.en : name.tr }</h3>
       <p className="font-light text-gray-500 text-base lg:text-lg dark:text-gray-400 text-center">
-        {description}
+        {language === "en" ? description.en : description.tr}
       </p>
       <div className="flex justify-center items-baseline my-8">
         <span className="mr-2 text-5xl font-extrabold">${price}</span>
@@ -30,7 +35,7 @@ export default function ServicePlan({ name, price, description, features } : Ser
                 clip-rule="evenodd"
               ></path>
             </svg>
-            <span>{feature}</span>
+            <span>{language === "en" ? feature.en : feature.tr }</span>
           </li>
         ))}
       </ul>

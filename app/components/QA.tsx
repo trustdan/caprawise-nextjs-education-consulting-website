@@ -16,16 +16,16 @@ type QAProps = {
 export default function QA({ question, answer }: QAProps){
   const { isOpen, setIsOpen, language } = useQA();
   return (
-    <div className="border rounded-md p-5">
+    <div className="border-b rounded-md p-5 ">
       <div
-        className="flex justify-between items-center cursor-pointer"
+        className="flex justify-between items-center cursor-pointer "
         onClick={() => setIsOpen(!isOpen)}
       >
         <h3 className="text-lg font-medium">{language==="en" ? question.en : question.tr}</h3>
         <ChevronDownIcon
           className={`${
             isOpen ? 'transform rotate-180' : ''
-          } w-5 h-5 text-gray-500 `}
+          } w-5 h-5 text-gray-500 transition-all duration-300 ease-linear`}
         />
       </div>
       {isOpen && <p className="mt-4">{language==="en" ? answer.en : answer.tr}</p>}
