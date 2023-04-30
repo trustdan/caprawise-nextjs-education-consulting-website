@@ -1,7 +1,8 @@
-import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 import { useLanguageContext } from "../hooks/useLanguageContext";
+
 
 type HamburgerProps = {
     navBarItems: {
@@ -14,12 +15,11 @@ type HamburgerProps = {
 
 export default function Hamburger(props: HamburgerProps) {
   const [isHamburger, setIsHamburger] = useState(false);
-  const context = useLanguageContext();
-
+  const language = useLanguageContext().language;
   return (
     <div
       aria-label="hamburger-menu"
-      className="flex items-center gap-4 relative"
+      className="flex items-center gap-4 relative "
     >
       <button
         type="button"
@@ -27,26 +27,27 @@ export default function Hamburger(props: HamburgerProps) {
         onClick={() => setIsHamburger((isHamburger) => !isHamburger)}
       >
         <Image
-          src={isHamburger ? "/hamburgerClose.svg" : "/hamburger.svg"}
+          src={isHamburger ? "/hamburgerX.svg" : "/hamburger.svg"}
           alt={isHamburger ? "An X icon for closing hamburger menu" : " A Three-layered hamburg menu icon" }
-          width={32}
-          height={32}
+          width={40}
+          height={40}
+          className="transition-all duration-500 ease-in-out transform hover:scale-110"
         />
       </button>
       {isHamburger && (
         <div
           aria-label="mobile-nav-menu"
-          className="fixed top-0 right-0 z-50 w-full h-full bg-opacity-80 flex items-center justify-center"
+          className="fixed top-0 right-0 w-full flex items-center justify-center font-bold uppercase tracking-widest text-gray-500"
           onClick={() => setIsHamburger(false)}
         >
-          <div className="bg-white rounded-lg shadow-lg p-0 m-0 absolute top-16 right-0 w-full text-center">
+          <div className="bg-white rounded-lg shadow-lg p-0 m-0 absolute top-16 right-0 w-full text-center h-[calc(100vh-64px)] flex flex-col ">
             {props.navBarItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="block py-2 px-4 hover:bg-gray-100 border border-slate-200"
+                className="flex py-2 px-4 hover:bg-gray-100 border border-slate-200 h-full  items-center justify-center"
               >
-                {context.language === "en" ? item.en : item.tr}
+                {language === "en" ? item.en : item.tr}
               </Link>
             ))}
           </div>
