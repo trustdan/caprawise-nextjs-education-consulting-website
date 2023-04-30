@@ -1,12 +1,24 @@
-'use client'
 import ServicePlan from "../components/ServicePlan";
-import { useLanguageContext } from "../hooks/useLanguageContext";
 import Footnotes from "../components/Footnotes";
+import PageIntroduction from "../components/PageIntroduction";
 
-
+export const metadata = {
+  title: "Services | Hizmetler",
+  description: "Education Consulting packages that we offer for higher education in the United States | ABD'de yükseköğretim için sunduğumuz eğitim danışmanlığı paketleri",
+};
 
 export default function Services() {
- const { language } = useLanguageContext();
+
+ const PAGE_INTRO_DATA = {
+    title:{
+      en: "Exploring graduate-level education opportunities in the US?",
+      tr: "ABD'de lisansüstü eğitim fırsatları mı arıyorsunuz?",
+    },
+    description:{
+      en: "We know how daunting the grad school applications in the US can be. Here at X, we are offering a variety of services to help you with the entire application process.",
+      tr: "ABD'de lisansüstü eğitim başvurularının ne kadar zor olduğunu biliyoruz. X olarak, başvuru sürecinin her aşamasında size yardımcı olmak için çeşitli hizmetler sunuyoruz.",
+    }
+  }
 
  const footnotes = [{
     en: "None of our services include writing a statement of purpose on behalf of the students",
@@ -30,22 +42,28 @@ export default function Services() {
         en: "Eligibility and academic background assessment",
         tr: "Akademik geçmiş değerlendirmesi ve uygunluk belirleme",
       },
-      features: {
-        en: [
-          "A 45-minute virtual meeting",
-          "Assesment of academic background and interests",
-          "Overview of application requirements",
-          "Determining eligibility for studying in the US",
-          "Briefing about the US education system",
-        ],
-        tr: [
-          "45 dakikalık online görüşme",
-          "Akademik geçmiş ve ilgi alanlarının değerlendirilmesi",
-          "Başvuru gerekliliklerinin genel değerlendirmesi",
-          "ABD'de eğitim almak için uygunluk belirlenmesi",
-          "ABD eğitim sistemi hakkında bilgilendirme",
-        ]
-      },
+      features: [
+          {
+          en: "A 45-minute virtual meeting",
+          tr: "45 dakikalık online görüşme",
+          },
+         {
+          en: "Assessment of academic background and interests",
+          tr: "Akademik geçmiş ve ilgi alanlarının değerlendirilmesi",
+         },
+          { 
+          en: "Overview of application requirements",
+          tr: "Başvuru gerekliliklerinin genel değerlendirmesi",
+          },
+          {
+          en: "Determining eligibility for studying in the US",
+          tr: "ABD'de eğitim almak için uygunluk belirlenmesi",
+          },
+          {
+          en: "Briefing about the US education system",
+          tr: "ABD eğitim sistemi hakkında bilgilendirme",
+          },
+    ]
     },
     {
       name: {
@@ -57,24 +75,32 @@ export default function Services() {
         en: "Standard assistance with the entire application process",
         tr: "10 okula kadar başvuru sürecinin tamamında destek",
       },
-      features: {
-        en: [
-          "Application support up to 10 universities",
-          "Feedback on the Statement of Purpose with regards to grammar and coherence.",
-          "Review of application documents for each school/program",
-          "Resources for TOEFL/IELTS/GRE/GMAT",
-          "Support for official communication with target schools",
-          "Extra virtual meetings with students if necessary",
-        ],
-        tr: [
-          "10 üniversiteye kadar başvuru desteği",
-          "Niyet mektubuna dair dilbilgisi ve tutarlılık açısından geri bildirim",
-          "Her okul/program için başvuru belgelerinin yeterliliğinin kontrolü",
-          "TOEFL/IELTS/GRE/GMAT için kaynaklar",
-          "Başvurmak istenilen okullarla resmi iletişim desteği",
-          "Gerektiği taktirde ekstra online görüşmeler",
-        ]
-      },
+      features: [
+          {
+            en: "Application support up to 10 universities",
+            tr: "10 üniversiteye kadar başvuru desteği",
+          },
+          {
+            en: "Feedback on the Statement of Purpose with regards to grammar and coherence.",
+            tr: "Niyet mektubuna dair dilbilgisi ve tutarlılık açısından geri bildirim",
+          },
+          {
+            en: "Review of application documents for each school/program",
+            tr: "Her okul/program için başvuru belgelerinin yeterliliğinin kontrolü",
+          },
+          {
+            en: "Resources for TOEFL/IELTS/GRE/GMAT",
+            tr: "TOEFL/IELTS/GRE/GMAT için kaynaklar",
+          },
+          {
+            en: "Support for official communication with target schools",
+            tr: "Başvurmak istenilen okullarla resmi iletişim desteği",
+          },
+          {
+            en: "Extra virtual meetings with students if necessary",
+            tr: "Gerektiği taktirde ekstra online görüşmeler",
+          },
+      ],
     },
     {
       name: {
@@ -86,48 +112,43 @@ export default function Services() {
         en: "The highest level of assistance with the entire application process",
         tr: "10 okula kadar başvuru sürecinin tamamında en üst düzeyde destek",
       },
-      features: {
-        en: [
-          "Everything included in the Standard Package",
-          "Managing the students’ application portal ",
-          "Ensuring the timely submission of all application documents within the specified application deadline",
-          "Exploring extensive student loans and financial aid opportunities",
-        ],
-        tr: [
-          "Standart Paket'te yer alan tüm hizmetler",
-          "Öğrencinin başvuru portalının yönetimi",
-          "Belirtilen başvuru süresi içinde tüm başvuru belgelerinin zamanında gönderilmesinin sağlanması",
-          "Uluslararasi öğrenci kredileri ve mali yardım fırsatlarının araştırılması",
-        ]
-      },
+      features: [
+          {
+            en: "Everything included in the Standard Package",
+            tr: "Standart Paket'te yer alan tüm hizmetler",
+          },
+          {
+            en: "Managing the students’ application portal", 
+            tr: "Öğrencinin başvuru portalının yönetimi",
+          },
+          {
+            en: "Ensuring the timely submission of all application documents within the specified application deadline",
+            tr: "Belirtilen başvuru süresi içinde tüm başvuru belgelerinin zamanında gönderilmesinin sağlanması",
+          },
+          {
+            en: "Exploring extensive student loans and financial aid opportunities",
+            tr: "Uluslararasi öğrenci kredileri ve mali yardım fırsatlarının araştırılması",
+          },
+      ],
     },
   ];
   return (
     <section className="bg-white dark:bg-gray-900">
       <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-        <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
-          <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-            {language === "en" ? "Exploring graduate-level education opportunities in the US?" : "ABD'de lisansüstü eğitim fırsatları mı arıyorsunuz?"}  
-          </h2>
-          <p className="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">
-           {language === "en" ? "We know how daunting the grad school applications in the US are. Here at X, we are offering a variety of services to help you with the entire application process." :
-            "ABD'de lisansüstü eğitim başvurularının ne kadar zor olduğunu biliyoruz. X olarak, başvuru sürecinin her aşamasında size yardımcı olmak için çeşitli hizmetler sunuyoruz."}
-          </p>
-        </div>
+        <PageIntroduction title={PAGE_INTRO_DATA.title} description={PAGE_INTRO_DATA.description} />
         <div className="space-y-8 lg:grid lg:grid-cols-3  md:grid-cols-2 sm:gap-6 xl:gap-10 lg:space-y-0">
           {SERVICE_PLANS.map((plan, index) => (
             <ServicePlan
               key={index}
-              name={language === "en" ? plan.name.en : plan.name.tr }
-              description={language === "en" ? plan.description.en : plan.description.tr }
+              name={plan.name}
+              description={plan.description}
               price={plan.price}
-              features={language === "en" ? plan.features.en : plan.features.tr }
+              features={plan.features}
                />
           ))}
         </div>
       </div>
       <Footnotes footnotes={footnotes} />
-
     </section>
   );
 }

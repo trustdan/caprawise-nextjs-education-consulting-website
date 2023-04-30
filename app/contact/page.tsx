@@ -1,3 +1,11 @@
+
+
+
+export const metadata = {
+  title: "Contact | İletişim",
+  description: "Contact us | Bize ulaşın",
+};
+
 export default function Contact() {
   return (
     <main>

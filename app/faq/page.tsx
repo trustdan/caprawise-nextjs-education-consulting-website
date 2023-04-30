@@ -1,4 +1,9 @@
-import Faq from "../components/QA";
+import QA from "../components/QA";
+
+export const metadata = {
+  title: "FAQ | SSS",
+  description: "Frequently Asked Questions | Sıkça Sorulan Sorular",
+};
 
 export default function FAQ() {
   const FAQ_DATA = () => [
@@ -39,7 +44,7 @@ export default function FAQ() {
       <h1 className="text-3xl font-bold">{}</h1>
       <div className="flex flex-col w-full max-w-3xl mt-8">
         {FAQ_DATA().map((faq) => (
-          <Faq
+          <QA
             key={faq.question.en}
             question={faq.question}
             answer={faq.answer}

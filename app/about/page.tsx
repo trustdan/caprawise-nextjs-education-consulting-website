@@ -1,3 +1,10 @@
+
+
+export const metadata = {
+  title: "About | Hakkımızda",
+  description: "About us | Hakkımızda",
+};
+
 export default function About(){
   return (
     <main>
