@@ -18,7 +18,6 @@ interface UseHeaderReturn {
   headerRef: React.RefObject<HTMLElement>;
   navItemsRef: React.RefObject<HTMLElement>;
   languageRef: React.RefObject<HTMLDivElement>;
-  hamburgerRef: React.RefObject<HTMLDivElement>;
 }
 
 export function useHeader(): UseHeaderReturn {
@@ -54,7 +53,6 @@ export function useHeader(): UseHeaderReturn {
   const headerRef = useRef<HTMLElement>(null);
   const navItemsRef = useRef<HTMLElement>(null);
   const languageRef = useRef<HTMLDivElement>(null);
-  const hamburgerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Set active link(necessary for accessing via url with specific pathnames; e.g. .../about)
@@ -64,14 +62,12 @@ export function useHeader(): UseHeaderReturn {
     const headerAnimation = createAnimation(headerRef.current!, 1.25, { y: 0, ease: "power3.out" });
     const navItemsAnimation = createAnimation(navItemsRef.current!, 1, { opacity: 1, ease: "power3.out" });
     const languageAnimation = createAnimation(languageRef.current!, 1, { opacity: 1, ease: "power3.out" });
-    const hamburgerAnimation = createAnimation(hamburgerRef.current!, 1, { opacity: 1, ease: "power3.out" });
 
     const tl = gsap.timeline();
     tl.add(headerAnimation)
       .add(navItemsAnimation, "-=0.5")
-      .add(languageAnimation, "-=0.5")
-      .add(hamburgerAnimation, "-=0.5");
+      .add(languageAnimation, "-=0.5");
   }, []);
 
-  return { languageContext, NAV_BAR_ITEMS, activeLink, setActiveLink, headerRef, navItemsRef, languageRef, hamburgerRef };
+  return { languageContext, NAV_BAR_ITEMS, activeLink, setActiveLink, headerRef, navItemsRef, languageRef };
 };

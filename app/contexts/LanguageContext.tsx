@@ -1,5 +1,5 @@
 'use client';
-import { createContext, useState, ReactNode, useMemo, useEffect } from "react";
+import { createContext, useState, ReactNode } from "react";
 
 export interface LanguageContextValue {
   language: string;
@@ -15,21 +15,10 @@ interface LanguageProviderProps {
 }
 
 function LanguageProvider({ children }: LanguageProviderProps) {
-  const [language, setLanguage] = useState<string>(() => {
-    // Get the language from localStorage on first render (this is for retaining the language value after the page refreshes)
-    const storedLanguage = window.localStorage.getItem("language");
-    return storedLanguage ?? "en";
-  });
-
-  const value = useMemo(() => ({ language, setLanguage }), [language]);
-
-  // Update the localStorage value whenever the language changes
-  useEffect(() => {
-    window.localStorage.setItem("language", language);
-  }, [language]);
+  const [language, setLanguage] = useState("en");
 
   return (
-    <LanguageContext.Provider value={value}>
+    <LanguageContext.Provider value={{ language, setLanguage }}>
       {children}
     </LanguageContext.Provider>
   );
