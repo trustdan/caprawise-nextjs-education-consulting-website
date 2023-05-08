@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { BsMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import useThemeChanger from "../hooks/useThemeChanger";
 
@@ -19,5 +19,4 @@ export default function ThemeChanger() {
       )}
     </button>
   );
-};
-
+}
