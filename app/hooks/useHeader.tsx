@@ -1,16 +1,16 @@
 import { useState, useEffect, useRef } from "react";
 import { useLanguageContext } from "./useLanguageContext";
 import { gsap } from "gsap";
-import createAnimation from "../utilities/CreateAnimation";
 
 interface NavBarItem {
-  name: string;
+  name: {
+    en: string;
+    tr: string;
+  };
   href: string;
-  en: string;
-  tr: string;
 }
 
-interface UseHeaderReturn {
+interface IUseHeaderReturn {
   languageContext: ReturnType<typeof useLanguageContext>;
   NAV_BAR_ITEMS: NavBarItem[];
   activeLink: string;
@@ -18,34 +18,39 @@ interface UseHeaderReturn {
   headerRef: React.RefObject<HTMLElement>;
   navItemsRef: React.RefObject<HTMLElement>;
   languageRef: React.RefObject<HTMLDivElement>;
+  hamburgerRef: React.RefObject<HTMLDivElement>;
 }
 
-export function useHeader(): UseHeaderReturn {
+export function useHeader(): IUseHeaderReturn {
   const languageContext = useLanguageContext();
   const NAV_BAR_ITEMS: NavBarItem[] = [
     {
-      name: 'about',
-      href: '/about',
-      en: 'ABOUT',
-      tr: 'HAKKIMIZDA',
+      name:  {
+        en: "ABOUT",
+        tr: "HAKKIMIZDA",
+      },
+      href: "/about",
     },
     {
-      name: 'services',
-      href: '/services',
-      en: 'SERVICES',
-      tr: 'HİZMETLER',
+      name:  {
+        en: "SERVICES",
+        tr: "HİZMETLER",
+      },
+      href: "/services",
     },
     {
-      name: 'faq',
-      href: '/faq',
-      en: 'FAQ',
-      tr: 'SSS',
+      name: {
+        en: "FAQ",
+        tr: "SSS",
+      },
+      href: "/faq",
     },
     {
-      name: 'contact',
-      href: '/contact',
-      en: 'CONTACT',
-      tr: 'İLETİŞİM',
+      name: {
+        en: "CONTACT",
+        tr: "İLETİŞİM",
+      },
+      href: "/contact",
     },
   ];
 
@@ -53,21 +58,53 @@ export function useHeader(): UseHeaderReturn {
   const headerRef = useRef<HTMLElement>(null);
   const navItemsRef = useRef<HTMLElement>(null);
   const languageRef = useRef<HTMLDivElement>(null);
+  const hamburgerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Set active link(necessary for accessing via url with specific pathnames; e.g. .../about)
-    setActiveLink(window.location.pathname);
+    if (typeof window !== "undefined") {
+      setActiveLink(window.location.pathname);
+    }
 
-    // GSAP Animations
-    const headerAnimation = createAnimation(headerRef.current!, 1.25, { y: 0, ease: "power3.out" });
-    const navItemsAnimation = createAnimation(navItemsRef.current!, 1, { opacity: 1, ease: "power3.out" });
-    const languageAnimation = createAnimation(languageRef.current!, 1, { opacity: 1, ease: "power3.out" });
+    // GSAP Animations  
+    const headerAnimation = gsap.to(headerRef.current!, {
+      duration: 0.5,
+      y: 0,
+      ease: "power3.out",
+    });
+    const navItemsAnimation = gsap.to(navItemsRef.current!, {
+      duration: 0.5,
+      opacity: 1,
+      ease: "power3.out",
+    });
 
+    const languageAnimation = gsap.to(languageRef.current!, {
+      duration: 0.5,
+      opacity: 1,
+      ease: "power3.out",
+    });
+
+    const hamburgerAnimation = gsap.to(hamburgerRef.current!, {
+      duration: 0.5,
+      opacity: 1,
+      ease: "power3.out",
+    });
+    
     const tl = gsap.timeline();
     tl.add(headerAnimation)
       .add(navItemsAnimation, "-=0.5")
-      .add(languageAnimation, "-=0.5");
+      .add(languageAnimation, "-=0.5")
+      .add(hamburgerAnimation, "-=0.5");
   }, []);
 
-  return { languageContext, NAV_BAR_ITEMS, activeLink, setActiveLink, headerRef, navItemsRef, languageRef };
-};
+  return {
+    languageContext,
+    NAV_BAR_ITEMS,
+    activeLink,
+    setActiveLink,
+    headerRef,
+    navItemsRef,
+    languageRef,
+    hamburgerRef,
+  };
+}
