@@ -1,5 +1,6 @@
 import Cofounder from "../components/Cofounder";
 import PageIntroduction from "../components/PageIntroduction";
+import PageStyler from "../components/PageStyler";
 
 export const metadata = {
   title: "About | Hakkımızda",
@@ -45,23 +46,24 @@ export default function About() {
   };
 
   return (
-    <main className="h-full min-h-[calc(100vh-264px)] px-5 pb-5 dark:bg-gray-900 dark:text-white">
-      <PageIntroduction
-        title={ABOUT_PAGE_INTRODUCTION.title}
-        description={ABOUT_PAGE_INTRODUCTION.description}
-      />
-      <div className="flex flex-col md:flex-row justify-center gap-5 py-5   ">
-        {COFOUNDERS.map((cofounder) => (
-          <Cofounder
-            name={cofounder.name}
-            description={cofounder.description}
-            imagePath={cofounder.imagePath}
-            imageAlt={cofounder.imageAlt}
-            key={cofounder.name}
-          />
-        ))}
-      </div>
-    </main>
+    <PageStyler>
+      <main className="h-full px-5 pb-">
+        <PageIntroduction
+          title={ABOUT_PAGE_INTRODUCTION.title}
+          description={ABOUT_PAGE_INTRODUCTION.description}
+        />
+        <div className="flex flex-col justify-center gap-5 py-5   ">
+          {COFOUNDERS.map((cofounder) => (
+            <Cofounder
+              name={cofounder.name}
+              description={cofounder.description}
+              imagePath={cofounder.imagePath}
+              imageAlt={cofounder.imageAlt}
+              key={cofounder.name}
+            />
+          ))}
+        </div>
+      </main>
+    </PageStyler>
   );
 }
-
