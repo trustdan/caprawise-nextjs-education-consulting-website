@@ -1,6 +1,7 @@
 import ServicePlan from "../components/ServicePlan";
 import Footnotes from "../components/Footnotes";
 import PageIntroduction from "../components/PageIntroduction";
+import PageStyler from "../components/PageStyler";
 
 export const metadata = {
   title: "Services | Hizmetler",
@@ -136,25 +137,27 @@ export default function Services() {
     },
   ];
   return (
-    <main className="flex flex-col gap-0 bg-LIGHT_PRIMARY_BG_COLOR dark:bg-DARK_PRIMARY_BG_COLOR transition-colors ease-linear duration-300">
-      <div className="px-4 mx-auto max-w-screen-xl lg:px-6">
-        <PageIntroduction
-          title={PAGE_INTRO_DATA.title}
-          description={PAGE_INTRO_DATA.description}
-        />
-        <div className="space-y-8 lg:grid lg:grid-cols-3  md:grid-cols-2 sm:gap-6 xl:gap-10 lg:space-y-0">
-          {SERVICE_PLANS.map((plan, index) => (
-            <ServicePlan
-              key={index}
-              name={plan.name}
-              description={plan.description}
-              price={plan.price}
-              features={plan.features}
-            />
-          ))}
+    <PageStyler>
+      <main className="flex flex-col gap-0 transition-colors ease-linear duration-300 w-full">
+        <div className="px-4 mx-auto max-w-screen-xl lg:px-6">
+          <PageIntroduction
+            title={PAGE_INTRO_DATA.title}
+            description={PAGE_INTRO_DATA.description}
+          />
+          <div className="space-y-8 lg:grid lg:grid-cols-3  md:grid-cols-2 sm:gap-6 xl:gap-10 lg:space-y-0">
+            {SERVICE_PLANS.map((plan, index) => (
+              <ServicePlan
+                key={index}
+                name={plan.name}
+                description={plan.description}
+                price={plan.price}
+                features={plan.features}
+              />
+            ))}
+          </div>
+          <Footnotes footnotes={footnotes} />
         </div>
-        <Footnotes footnotes={footnotes} />
-      </div>
-    </main>
+      </main>
+    </PageStyler>
   );
 }
