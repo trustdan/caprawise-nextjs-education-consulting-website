@@ -21,12 +21,12 @@ export function LanguageDropdown() {
       {isDropDownOpen && (
         <ul
           tabIndex={0}
-          className="menu dropdown-content p-0 rounded-box w-52 mt-4"
+          className="menu dropdown-content p-0 rounded-box w-36 lg:w-52 mt-4 "
         >
           {LANGUAGES.map((language) => (
             <li
               key={language.code}
-              className="btn bg-white hover:bg-gray-500 text-black hover:text-white rounded-btn text-[12px] border-gray-200 my-1"
+              className="btn rounded-btn my-1 bg-LIGHT_PRIMARY_BG_COLOR dark:bg-DARK_SECONDARY_BG_COLOR dark:text-white hover:bg-gray-500 dark:hover:bg-LIGHT_SECONDARY_BG_COLOR text-black hover:text-white dark:hover:text-black text-[12px] border-gray-200 dark:border-gray-600"
               onClick={handleOptionClick}
             >
               {language.name}

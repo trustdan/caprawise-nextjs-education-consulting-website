@@ -18,25 +18,25 @@ export default function Cofounder(props: CofounderProps) {
   const { cofounderRef } = useCofounder();
   return (
     <div
-      className="flex flex-col border  border-gray-100 shadow
-       dark:border-gray-600  bg-LIGHT_SECONDARY_BG_COLOR dark:bg-DARK_SECONDARY_BG_COLOR dark:text-white items-center
-        text-justify mx-auto lg:mx-0 p-5 rounded-xl gap-5 w-[450px] md:w-[1/2] lg:w-[600px]"
+      className="flex flex-col lg:flex-row border-none dark:text-white
+        text-justify mx-auto  p-5 rounded-xl gap-3 w-[380px] md:w-[1/2] lg:w-[1000px] items-center justify-evenly"
       ref={cofounderRef}
     >
       <Image
         src={props.imagePath}
-        className="rounded-badge drop-xl"
         alt={props.imageAlt}
-        width={250}
-        height={250}
+        width={300}
+        height={300}
         placeholder="blur"
         blurDataURL={props.imagePath}
         priority={true}
       />
-      <div className="flex flex-col gap-3 w-full">
-        <div className="flex flex-col text-xl font-bold text-center gap-2 ">
-          <h1>{props.name}</h1>
-          <h2>{language === "en" ? "Co-founder" : "Kurucu"}</h2>
+      <div className="flex flex-col gap-2 w-[300px] lg:w-2/3 h-fit lg:h-[405px]   ">
+        <div className="text-xl gap-2 text-center lg:text-left ">
+          <h1 className="font-bold ">{props.name}</h1>
+          <h2 className=" font-thin">
+            {language === "en" ? "Co-founder" : "Kurucu"}
+          </h2>
         </div>
 
         <div>

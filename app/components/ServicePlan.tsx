@@ -19,10 +19,10 @@ export default function ServicePlan({
   const { hRef, pRef, spanRef, uRef, divRef } = useServicePlan();
   return (
     <div
-      className="flex flex-col p-3 mx-auto max-w-md text-center text-gray-900 
-    bg-LIGHT_SECONDARY_BG_COLOR dark:bg-DARK_SECONDARY_BG_COLOR rounded-lg 
+      className="flex flex-col p-3 mx-auto max-w-md text-center text-gray-900
+    bg-LIGHT_SECONDARY_BG_COLOR dark:bg-DARK_SECONDARY_BG_COLOR rounded-lg
     border border-gray-100 shadow dark:border-gray-600 dark:text-white 
-    hover:scale-105 transition duration-200 ease-in-out"
+    lg:hover:scale-105 transition duration-200 ease-in-out"
     >
       <h3 className="mb-4 text-2xl font-semibold" ref={hRef}>
         {language === "en" ? name.en : name.tr}

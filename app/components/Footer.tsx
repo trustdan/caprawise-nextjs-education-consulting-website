@@ -6,11 +6,11 @@ export default function Footer() {
   const language = useLanguageContext().language;
   const { footerRef } = useFooter();
   return (
-    <footer
-      className="footer footer-center p-5 h-fit bg-LIGHT_PRIMARY_BG_COLOR dark:bg-DARK_PRIMARY_BG_COLOR text-base-content rounded pb-5 gap-8 dark:text-white"
-      ref={footerRef}
-    >
-      <div className="grid grid-flow-col gap-16 hover:cursor-pointer">
+    <footer className="footer footer-center p-5 h-fit bg-LIGHT_PRIMARY_BG_COLOR dark:bg-DARK_PRIMARY_BG_COLOR text-base-content pb-5 gap-8 dark:text-white">
+      <div
+        className="grid grid-flow-col gap-16 hover:cursor-pointer"
+        ref={footerRef}
+      >
         <a>
           <svg
             xmlns="http://www.w3.org/2000/svg"
