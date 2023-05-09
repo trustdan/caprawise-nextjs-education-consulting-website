@@ -1,5 +1,6 @@
 import QA from "../components/QA";
 import PageIntroduction from "../components/PageIntroduction";
+import PageStyler from "../components/PageStyler";
 
 export const metadata = {
   title: "FAQ | SSS",
@@ -51,20 +52,22 @@ export default function FAQ() {
     },
   ];
   return (
-    <main className="flex flex-col items-center bg-LIGHT_PRIMARY_BG_COLOR dark:bg-DARK_PRIMARY_BG_COLOR">
-      <PageIntroduction
-        title={FAQ_PAGE_INTRO.title}
-        description={FAQ_PAGE_INTRO.description}
-      />
-      <div className="flex flex-col w-full max-w-3xl ">
-        {FAQ_DATA().map((faq) => (
-          <QA
-            key={faq.question.en}
-            question={faq.question}
-            answer={faq.answer}
-          />
-        ))}
-      </div>
-    </main>
+    <PageStyler>
+      <main className="flex flex-col items-center">
+        <PageIntroduction
+          title={FAQ_PAGE_INTRO.title}
+          description={FAQ_PAGE_INTRO.description}
+        />
+        <div className="w-full max-w-3xl ">
+          {FAQ_DATA().map((faq) => (
+            <QA
+              key={faq.question.en}
+              question={faq.question}
+              answer={faq.answer}
+            />
+          ))}
+        </div>
+      </main>
+    </PageStyler>
   );
 }
