@@ -1,6 +1,12 @@
-import { setCookie } from 'nookies';
+import { setCookie } from "nookies";
 import { useLanguageContext } from "../hooks/useLanguageContext";
-import { Dispatch, MouseEvent, SetStateAction, useEffect, useState } from "react";
+import {
+  Dispatch,
+  MouseEvent,
+  SetStateAction,
+  useEffect,
+  useState,
+} from "react";
 
 interface Language {
   name: string;
@@ -31,12 +37,11 @@ export function useLanguageDropdown(): UseLanguageDropdownReturn {
     },
   ];
 
-
   useEffect(() => {
     // Update the language value in the cookie
-    setCookie(null, 'language', context.language, {
+    setCookie(null, "language", context.language, {
       maxAge: 30 * 24 * 60 * 60,
-      path: '/',
+      path: "/",
     });
   }, [context.language]);
 
@@ -50,10 +55,8 @@ export function useLanguageDropdown(): UseLanguageDropdownReturn {
     if (language) {
       context.setLanguage(language.code);
     }
-    console.log(language);
   };
 
-    
   const handleOptionClick = (event: React.MouseEvent<HTMLLIElement>): void => {
     handleLanguageSelection(event);
     setIsDropDownOpen(false);

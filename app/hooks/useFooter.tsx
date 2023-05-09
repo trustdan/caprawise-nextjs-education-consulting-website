@@ -1,6 +1,5 @@
 import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 export function useFooter() {
   const footerRef = useRef(null);
@@ -9,12 +8,8 @@ export function useFooter() {
     // gsap animations
     gsap.from(footerRef.current, {
       opacity: 0,
-      duration: 0.5,
+      duration: 0.25,
       ease: "ease-in-out",
-      scrollTrigger: {
-        trigger: footerRef.current,
-        start: "top 90%",
-      },
     });
   }, []);
 

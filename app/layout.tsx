@@ -1,15 +1,23 @@
+import React from "react";
 import "./globals.css";
 import Header from "./components/Header";
 import { LanguageProvider } from "./contexts/LanguageProvider";
 import ThemeProviders from "./contexts/ThemeProvider";
 import ThemeChanger from "./contexts/ThemeChanger";
 import Footer from "./components/Footer";
+import { Nunito_Sans, Nunito } from "next/font/google";
 
 export const metadata = {
   title: "Education Consulting",
   description:
     "Official website of  XXX Education Consulting Company based in the United States",
 };
+
+const nunito = Nunito({
+  weight: ["200", "300", "400", "600", "700", "800"],
+  style: ["normal", "italic"],
+  subsets: ["latin-ext", "latin"],
+});
 
 export default function RootLayout({
   children,
@@ -18,7 +26,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className={nunito.className}>
         <ThemeProviders>
           <LanguageProvider>
             <Header />
