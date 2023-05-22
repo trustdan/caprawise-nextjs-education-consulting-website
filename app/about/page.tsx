@@ -27,7 +27,7 @@ export default function About() {
       title: "Co-founder",
       description: {
         en: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, soluta laborum possimus assumenda dignissimos iste quasi similique est eum facere suscipit quia pariatur neque harum vitae vero debitis corporis? Suscipit dolores, culpa at quia cum ad eum reiciendis quaerat corporis dolorem error, temporibus sed quam minima voluptates soluta eaque accusantium ab deserunt perferendis repudiandae. Tempora esse aperiam molestias eligendi neque ipsam aut a perferendis, cumque ab minima facere odit laudantium velit impedit nam totam corporis amet explicabo sequi. Animi perferendis deleniti quo cum recusandae aut ipsa velit tempora a. Nisi tempore incidunt sed quam vel aperiam aliquid ab a voluptatem.",
-        tr: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti in facere repudiandae unde tempore iusto nesciunt illo quam magnam, tenetur maxime pariatur consectetur molestiae vero magni numquam cupiditate ut? Aspernatur doloremque quibusdam incidunt saepe blanditiis pariatur iusto dolorem voluptate veniam, sequi, animi amet? Libero odit, minus nihil fugiat hic illum illo debitis reprehenderit assumenda voluptas explicabo earum magni soluta dolore incidunt quo cum perferendis et excepturi molestiae numquam tempora repellat rerum autem. Explicabo earum quas quo iure impedit, nostrum obcaecati, similique esse saepe, est enim nisi error eum velit consequuntur aspernatur dolor eos. Corrupti ut, ad beatae delectus sapiente laudantium.Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti in facere repudiandae unde tempore iusto nesciunt illo quam magnam, tenetur maxime pariatur consectetur molestiae vero magni numquam cupiditate ut? Aspernatur doloremque quibusdam incidunt saepe blanditiis pariatur iusto dolorem voluptate veniam, sequi, animi amet? Libero odit, minus nihil fugiat hic illum illo debitis reprehenderit assumenda voluptas explicabo earum magni soluta dolore incidunt quo cum perferendis et excepturi molestiae numquam tempora repellat rerum autem. Explicabo earum quas quo iure impedit, nostrum obcaecati, similique esse saepe, est enim nisi error eum velit consequuntur aspernatur dolor",
+        tr: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti in facere repudiandae unde tempore iusto nesciunt illo quam magnam, tenetur maxime pariatur consectetur molestiae vero magni numquam cupiditate ut? Aspernatur doloremque quibusdam incidunt saepe blanditiis pariatur iusto dolorem voluptate veniam, sequi, animi amet? Libero odit, minus nihil fugiat hic illum illo debitis reprehenderit assumenda voluptas explicabo earum magni soluta dolore incidunt quo cum perferendis et excepturi molestiae numquam tempora repellat rerum autem. Explicabo earum quas quo iure impedit, nostrum obcaecati, similique esse saepe, est enim nisi error eum velit consequuntur aspernatur dolor eos. Corrupti ut, ad ",
       },
       imagePath: "/OGUZHANYANGOZ2.jpeg",
       imageAlt: "Image of Oğuzhan Yangöz - one of the co-founders",
@@ -47,23 +47,25 @@ export default function About() {
 
   return (
     <PageStyler>
-      <main className="h-full px-5 pb-">
+      <section id="our-team" className="h-full px-5">
         <PageIntroduction
           title={ABOUT_PAGE_INTRODUCTION.title}
           description={ABOUT_PAGE_INTRODUCTION.description}
         />
-        <div className="flex flex-col justify-center gap-5 py-5   ">
-          {COFOUNDERS.map((cofounder) => (
+        <div className="flex flex-col justify-center gap-5 lg:gap-24 py-5   ">
+          {COFOUNDERS.map((cofounder, index) => (
             <Cofounder
               name={cofounder.name}
               description={cofounder.description}
               imagePath={cofounder.imagePath}
               imageAlt={cofounder.imageAlt}
               key={cofounder.name}
+              // Add this prop to pass the index to the Cofounder component
+              index={index}
             />
           ))}
         </div>
-      </main>
+      </section>
     </PageStyler>
   );
 }
