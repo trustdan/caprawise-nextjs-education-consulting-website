@@ -1,1 +1,1 @@
-The project is under development – live url, screenshots, and more details will be added soon.
+The project is under development – live url, screenshots, and more details will be added soon. 
