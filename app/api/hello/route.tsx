@@ -1,17 +1,19 @@
 import { NextRequest, NextResponse } from "next/server";
+import { prisma } from "@/app/lib/prisma";
 
 export async function GET(request: Request) {
-  const resp = [
+  const allContactForms = await prisma.contactForm.findMany();
+
+  return new NextResponse(
+    JSON.stringify({
+      message: "Form submitted successfully",
+      result: allContactForms,
+    }),
     {
-      name: "John",
-      age: 30,
-      car: "bmw",
-    },
-    {
-      name: "weq",
-      age: 302,
-      car: "ferrari", 
-    },
-  ];
-  return new Response(JSON.stringify(resp));
+      status: 200,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
 }

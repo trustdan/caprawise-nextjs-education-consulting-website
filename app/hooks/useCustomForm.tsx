@@ -1,4 +1,4 @@
-import { useState, useLayoutEffect, useRef } from "react";
+import { useState, useLayoutEffect, useRef, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -49,7 +49,7 @@ export function useCustomForm() {
     formData: FormData;
     token: string;
   }) => {
-    return fetch("/api/submit-contact-form", {
+    return await fetch("/api/submit-contact-form", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -70,7 +70,6 @@ export function useCustomForm() {
         );
       } else {
         console.log(data.statusText, data.status);
-        throw new Error("Error while submitting the form");
       }
     },
     onError: (error) => {
@@ -84,7 +83,7 @@ export function useCustomForm() {
   }: {
     formData: FormData;
   }) => {
-    return fetch("/api/send-contact-form-submission-emails", {
+    return await fetch("/api/send-contact-form-submission-emails", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -96,7 +95,6 @@ export function useCustomForm() {
   //mutation for sending confirmation email after the form submission
   const sendConfirmationEmailMutation = useMutation(sendConfirmationEmail, {
     onSuccess: (data) => {
-      console.log("Data sent in the email confirmation is: ", data.json());
       if (data.status === 200) {
         console.log("Email sent successfully");
       } else {
@@ -124,17 +122,11 @@ export function useCustomForm() {
     // Get the reCAPTCHA token by executing it with an action name
     const token = await executeRecaptcha("submit");
 
-    // Call the mutation function with an object with formData and token as properties
-    formSubmissionMutation.mutate({ formData, token });
-    try {
-      const emailResponse = await sendConfirmationEmailMutation.mutateAsync({
-        formData,
-      });
-      console.log("Email_response is: ", emailResponse);
-    } catch (error) {
-      console.log(error);
-      throw new Error("Error while sending email confirmation");
-    }
+    // Await for the form submission mutation to finish
+    await formSubmissionMutation.mutateAsync({ formData, token });
+
+    // Await for the email confirmation mutation to finish
+    await sendConfirmationEmailMutation.mutateAsync({ formData });
   };
 
   useLayoutEffect(() => {
