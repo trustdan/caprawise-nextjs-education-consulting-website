@@ -13,52 +13,32 @@ export default function Header() {
     headerRef,
     navItemsRef,
     languageRef,
-    hamburgerRef,
   } = useHeader();
 
   return (
     <>
-      <header
-        className="-translate-y-24 sticky top-0 z-50 bg-LIGHT_SECONDARY_BG_COLOR  "
-        ref={headerRef}
-      >
-        <div className="mx-auto flex h-16 max-w-screen-3xl items-center justify-between">
+      <header className="border-b border-gray-300 -translate-y-24" ref={headerRef}>
+        <div className="mx-auto flex h-16 max-w-screen-2xl items-center justify-between sm:px-6 lg:px-8">
           <div className="flex flex-1 items-center justify-end gap-8">
-            <nav
-              className="hidden lg:flex lg:gap-4 lg:text-xs lg:font-bold lg:uppercase lg:tracking-widest   opacity-0"
-              ref={navItemsRef}
-            >
+            <nav className="hidden lg:flex lg:gap-4 lg:text-xs lg:font-bold lg:uppercase lg:tracking-widest lg:text-gray-500 opacity-0" ref={navItemsRef}>
               {NAV_BAR_ITEMS.map((item) => (
                 <Link
-                  key={item.href}
+                  key={item.name}
                   href={item.href}
-                  className={`block h-16 border-b-4 leading-[4rem] transition ease-in-out duration-150 active:scale-90 text-[#22577E] hover:border-[#22577E] ${
+                  className={`block h-16 border-b-4 leading-[4rem] transition ease-in-out duration-500 active:scale-110 ${
                     activeLink === item.href
-                      ? "border-[#22577E] "
-                      : "border-transparent "
+                      ? "border-black text-red-700"
+                      : "border-transparent text-gray-500 hover:border-gray-500 hover:text-red-700"
                   }`}
                   onClick={() => setActiveLink(item.href)}
                 >
-                  {languageContext.language === "en"
-                    ? item.name.en
-                    : item.name.tr}
+                  {languageContext.language === "en" ? item.en : item.tr}
+                  
                 </Link>
               ))}
             </nav>
-            <div
-              role="div for gsap effect"
-              className="opacity-0 fixed left-5 lg:relative"
-              ref={languageRef}
-            >
-              <LanguageDropdown />
-            </div>
-            <div
-              role="div for gsap effect"
-              className="opacity-0"
-              ref={hamburgerRef}
-            >
-              <Hamburger navBarItems={NAV_BAR_ITEMS} />
-            </div>
+            <div aria-label="div for gsap effect" className="opacity-0" ref={languageRef}><LanguageDropdown/></div>
+            <Hamburger navBarItems={NAV_BAR_ITEMS} />
           </div>
         </div>
       </header>

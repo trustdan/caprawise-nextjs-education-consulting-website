@@ -1,10 +1,8 @@
-export const metadata = {
-  title: "Homepage | Anasayfa",
-  description: "Homepage | Anasayfa",
-};
-
 export default function Home() {
   return (
-    <main className="flex flex-col bg-[yellow] justify-center items-center "></main>
+    <main >
+      <h1>Home</h1>
+      <p>hello world- this is the home page</p>
+    </main>
   );
 }
