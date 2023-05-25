@@ -1,4 +1,4 @@
-export async function verifyRecaptcha(token: string): Promise<Response> {
+export async function verifyRecaptcha(token: string): Promise<Boolean> {
   try {
     const secret = process.env.RECAPTCHA_SECRET as string;
     const recaptchaVerificationResponse = await fetch(
@@ -10,7 +10,16 @@ export async function verifyRecaptcha(token: string): Promise<Response> {
         },
       }
     );
-    return recaptchaVerificationResponse;
+    const recaptchaVerificationResponseData =
+      await recaptchaVerificationResponse.json();
+    console.log(recaptchaVerificationResponseData);
+    if (
+      recaptchaVerificationResponseData.success &&
+      recaptchaVerificationResponseData.score > 0.7
+    ) {
+      return true;
+    }
+    return false;
   } catch (error) {
     console.error(error);
     throw new Error("Failed to verify recaptcha token");
