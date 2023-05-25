@@ -8,20 +8,19 @@ import Spinner from "./Spinner";
 export default function Form() {
   const {
     register,
+    handleMutationSubmit,
     handleSubmit,
     errors,
-    onSubmit,
     isModalOpen,
     setIsModalOpen,
     formSubmissionMutation,
-    sendConfirmationEmailMutation,
     language,
     contactFormRef,
   } = useCustomForm(); //this is a custom hook for abstracting the form logic
 
   return (
     <form
-      onSubmit={handleSubmit(onSubmit)}
+      onSubmit={handleSubmit(handleMutationSubmit)}
       className="max-w-sm md:max-w-xl mx-auto p-0 m-0"
       ref={contactFormRef}
     >
@@ -113,7 +112,7 @@ export default function Form() {
         open={isModalOpen}
         header={{ success: "🥳 ", failure: " 😞 " }}
         onClose={() => setIsModalOpen(false)}
-        formStatus={sendConfirmationEmailMutation.data?.status}
+        formStatus={formSubmissionMutation.data?.status}
         output={
           language === "en"
             ? {
