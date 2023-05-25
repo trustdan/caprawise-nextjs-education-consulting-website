@@ -38,96 +38,50 @@ export function useCustomForm() {
     resolver: zodResolver(schema),
     mode: "onTouched",
   });
-
   const { executeRecaptcha } = useGoogleReCaptcha();
 
-  // Define a mutation function that takes an object with formData and token as properties and returns a promise
-  const submitForm = async ({
-    formData,
-    token,
-  }: {
-    formData: FormData;
-    token: string;
-  }) => {
-    return await fetch("/api/submit-contact-form", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ formData: formData, token: token }),
-    });
-  };
+  // Get the reCAPTCHA token by executing it with an action name
 
-  // Use the useMutation hook to create a mutation object with the submitForm function
-  const formSubmissionMutation = useMutation(submitForm, {
-    onSuccess: (data) => {
-      setIsModalOpen(true); // Open the modal
-      // Check if the response is successful or not. Clean the form if successful. Keep the values if not.
-      if (data.status === 200) {
-        reset(
-          { fullName: "", email: "", phone: "", question: "" },
-          { keepValues: false }
-        );
-      } else {
-        console.log(data.statusText, data.status);
-      }
-    },
-    onError: (error) => {
-      console.log(error);
-      throw new Error("Error while executing formSubmissionMutation");
-    },
-  });
-
-  const sendConfirmationEmail = async ({
-    formData,
-  }: {
-    formData: FormData;
-  }) => {
-    return await fetch("/api/send-contact-form-submission-emails", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ formData: formData }),
-    });
-  };
-
-  //mutation for sending confirmation email after the form submission
-  const sendConfirmationEmailMutation = useMutation(sendConfirmationEmail, {
-    onSuccess: (data) => {
-      if (data.status === 200) {
-        console.log("Email sent successfully");
-      } else {
-        console.log(
-          "Email sending failed. Error: ",
-          data.statusText,
-          data.status
-        );
-        throw new Error("Error while sending email confirmation");
-      }
-    },
-    onError: (error) => {
-      console.log(error);
-      throw new Error("Error while executing sendConfirmationEmailMutation");
-    },
-  });
-
-  // Define a submit handler that calls the mutation function with an object with formData and token as properties
   const onSubmit = async (formData: FormData) => {
     if (!executeRecaptcha) {
       console.log("executeRecaptcha not yet available");
       throw new Error("executeRecaptcha not yet available");
     }
-
-    // Get the reCAPTCHA token by executing it with an action name
     const token = await executeRecaptcha("submit");
+    const response = await fetch("/api/submit-contact-form", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ formData, token }),
+    });
 
-    // Await for the form submission mutation to finish
-    await formSubmissionMutation.mutateAsync({ formData, token });
-
-    // Await for the email confirmation mutation to finish
-    await sendConfirmationEmailMutation.mutateAsync({ formData });
+    return response;
   };
+
+  async function handleMutationSubmit(formData: {
+    fullName: string;
+    email: string;
+    phone: string;
+    question: string;
+  }) {
+    await formSubmissionMutation.mutateAsync(formData);
+  }
+
+  const formSubmissionMutation = useMutation(onSubmit, {
+    onSuccess: (response) => {
+      const data = response.json();//for future debugging
+      console.log("on success block got triggered!");
+      setIsModalOpen(true);
+      if (response.status === 200) {
+        reset();
+      }
+    },
+    onError: (error) => {
+      console.log(error);
+      throw new Error(error as string);
+    },
+  });
 
   useLayoutEffect(() => {
     gsap.fromTo(
@@ -139,14 +93,13 @@ export function useCustomForm() {
 
   return {
     register,
+    handleMutationSubmit,
     handleSubmit,
     errors,
-    onSubmit,
     isModalOpen,
     setIsModalOpen,
     language,
     formSubmissionMutation,
-    sendConfirmationEmailMutation,
     contactFormRef,
   };
 }
