@@ -8,7 +8,6 @@ export const metadata = {
   description: "Contact us | Bize ulaşın",
 };
 
-
 export default function Contact() {
   const CONTACT_INTRODUCTION_DATA = {
     title: {
