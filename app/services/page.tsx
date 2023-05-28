@@ -16,8 +16,8 @@ export default function Services() {
       tr: "ABD'de lisansüstü eğitim fırsatları mı arıyorsunuz?",
     },
     description: {
-      en: "We know how daunting the grad school applications in the US can be. Here at X, we are offering a variety of services to help you with the entire application process.",
-      tr: "ABD'de lisansüstü eğitim başvurularının ne kadar zor olduğunu biliyoruz. X olarak, başvuru sürecinin her aşamasında size yardımcı olmak için çeşitli hizmetler sunuyoruz.",
+      en: "We know how daunting the grad school applications in the US can be. Here at Helios Admissions, we are offering a variety of services to help you with the entire application process.",
+      tr: "ABD'de lisansüstü eğitim başvurularının ne kadar zor olduğunu biliyoruz. Helios Admissions olarak, başvuru sürecinin her aşamasında size yardımcı olmak için çeşitli hizmetler sunuyoruz.",
     },
   };
 
