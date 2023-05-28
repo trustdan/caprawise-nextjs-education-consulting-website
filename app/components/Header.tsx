@@ -3,6 +3,8 @@ import Link from "next/link";
 import Hamburger from "./Hamburger";
 import { useHeader } from "../hooks/useHeader";
 import { LanguageDropdown } from "./LanguageDropdown";
+import { signOut, useSession } from "next-auth/react";
+import PrimaryButton from "./PrimaryButton";
 
 export default function Header() {
   const {
@@ -15,6 +17,8 @@ export default function Header() {
     languageRef,
     hamburgerRef,
   } = useHeader();
+
+  const { data: session } = useSession();
 
   return (
     <>
@@ -44,7 +48,22 @@ export default function Header() {
                     : item.name.tr}
                 </Link>
               ))}
+
+              {session && (
+                <Link
+                  href="/admin/dashboard"
+                  className={`hidden lg:block h-16 border-b-4 leading-[4rem] transition ease-in-out duration-150 active:scale-90 text-[#22577E] hover:border-[#22577E] ${
+                    activeLink === "/admin/dashboard"
+                      ? "border-[#22577E] "
+                      : "border-transparent "
+                  }`}
+                  onClick={() => setActiveLink("/admin/dashboard")}
+                >
+                  Dashboard
+                </Link>
+              )}
             </nav>
+
             <div
               role="div for gsap effect"
               className="opacity-0 fixed left-5 lg:relative"
@@ -52,6 +71,13 @@ export default function Header() {
             >
               <LanguageDropdown />
             </div>
+            {session && (
+              <PrimaryButton
+                label={{ en: "Log out", tr: "LOGOUT" }}
+                className="text-white hidden lg:block "
+                onClick={() => signOut()}
+              />
+            )}
             <div
               role="div for gsap effect"
               className="opacity-0"
