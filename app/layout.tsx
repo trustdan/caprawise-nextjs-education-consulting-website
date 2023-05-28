@@ -5,8 +5,9 @@ import { LanguageProvider } from "./contexts/LanguageProvider";
 import ThemeProviders from "./contexts/ThemeProvider";
 import ThemeChanger from "./contexts/ThemeChanger";
 import Footer from "./components/Footer";
-import { Nunito_Sans, Nunito } from "next/font/google";
+import { Nunito } from "next/font/google";
 import QueryProvider from "./contexts/QueryProvider";
+import AuthSessionProvider from "./contexts/AuthSessionProvider";
 
 export const metadata = {
   title: "Education Consulting",
@@ -20,24 +21,27 @@ const nunito = Nunito({
   subsets: ["latin-ext", "latin"],
 });
 
-export default function RootLayout({
-  children,
-}: {
+interface RootLayoutProps {
   children: React.ReactNode;
-}) {
+  session: any;
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body className={nunito.className}>
-        <ThemeProviders>
-          <QueryProvider>
-            <LanguageProvider>
-              <Header />
-              <ThemeChanger />
-              {children}
-              <Footer />
-            </LanguageProvider>
-          </QueryProvider>
-        </ThemeProviders>
+        <AuthSessionProvider>
+          <ThemeProviders>
+            <QueryProvider>
+              <LanguageProvider>
+                <Header />
+                <ThemeChanger />
+                {children}
+                <Footer />
+              </LanguageProvider>
+            </QueryProvider>
+          </ThemeProviders>
+        </AuthSessionProvider>
       </body>
     </html>
   );
