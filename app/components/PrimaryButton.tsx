@@ -1,5 +1,5 @@
 "use client";
-import React, { ButtonHTMLAttributes } from "react";
+import React, { ButtonHTMLAttributes, MouseEventHandler } from "react";
 import { useLanguageContext } from "../hooks/useLanguageContext";
 
 interface PrimaryButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -7,7 +7,7 @@ interface PrimaryButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
 }
 
-export default function Button({ ...props }: PrimaryButtonProps) {
+export default function Button({ ...props }: PrimaryButtonProps ) {
   const language = useLanguageContext().language;
   return (
     <div className="flex justify-center items-center">
