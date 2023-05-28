@@ -1,4 +1,4 @@
-import AdminMenu from "../components/AdminMenu";
+import AdminLogin from "../components/AdminLogin";
 import PageStyler from "../components/PageStyler";
 
 export const metadata = {
@@ -7,10 +7,11 @@ export const metadata = {
 };
 
 export default function Admin() {
+
   return (
     <PageStyler>
-      <main className="md:p-10 p-4  max-w-full">
-        <AdminMenu />
+      <main className="md:p-10 p-4 max-w-full ">
+        <AdminLogin />
       </main>
     </PageStyler>
   );
