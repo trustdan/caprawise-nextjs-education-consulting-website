@@ -1,6 +1,11 @@
 import AdminMenu from "@/app/components/AdminMenu";
 import PageStyler from "@/app/components/PageStyler";
 
+export const metadata = {
+  title: "Admin Dashboard| Admin Paneli",
+  description: "Admin-only dashboard | Sadece yöneticilerin görebileceği panel",
+};
+
 export default function Dashboard() {
   return (
     <PageStyler>
