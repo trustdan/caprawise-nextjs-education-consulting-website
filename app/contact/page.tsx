@@ -1,5 +1,5 @@
 import PageStyler from "../components/PageStyler";
-import Form from "../components/Form";
+import ContactForm from "../components/ContactForm";
 import PageIntroduction from "../components/PageIntroduction";
 import RecaptchaProvider from "../components/RecaptchaProvider";
 
@@ -20,16 +20,16 @@ export default function Contact() {
     },
   };
   return (
-    <PageStyler>
-      <main>
-        <RecaptchaProvider>
+    <RecaptchaProvider>
+      <PageStyler>
+        <main>
           <PageIntroduction
             title={CONTACT_INTRODUCTION_DATA.title}
             description={CONTACT_INTRODUCTION_DATA.description}
           />
-          <Form />
-        </RecaptchaProvider>
-      </main>
-    </PageStyler>
+          <ContactForm />
+        </main>
+      </PageStyler>
+    </RecaptchaProvider>
   );
 }
