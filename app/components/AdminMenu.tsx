@@ -1,41 +1,33 @@
 "use client";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useAdminMenu } from "../hooks/useAdminMenu";
 import Spinner from "./Spinner";
-import AdminTable from "./AdminTable";
+import DataRecordsTable from "./DataRecordsTable";
 
 export default function AdminMenu() {
-  const { openTab, setOpenTab, allContactForms, isLoading } = useAdminMenu();
+  const {
+    openTab,
+    setOpenTab,
+    allContactForms,
+    allApplicationForms,
+    isLoading,
+  } = useAdminMenu();
 
   const MENU_ITEMS = [
-    {
-      name: "Contact Form Records",
-      text: allContactForms,
-      href: "#link1",
-      current: true,
-    },
-    {
-      name: "Application Form Records",
-      // TO-DO update this to application form in the db
-      text: allContactForms,
-      href: "#link2",
-      current: false,
-    },
+    { name: "Contact Form Records", href: "contact-form-records" },
+    { name: "Application Form Records", href: "application-form-records" },
   ];
   return (
     <>
-      <div className="flex flex-wrap overflow-y-auto h-[calc(100dvh-270px)]">
+      <div className="flex flex-wrap overflow-y-auto h-[calc(100dvh-270px)] ">
         <div className="w-full">
           <ul
-            className="flex mb-0 list-none flex-wrap  pb-4 flex-row sticky top-0 bg-white z-10"
+            className="flex gap-2 mb-4 list-none flex-wrap flex-row sticky top-0 z-10"
             role="tablist"
           >
             {MENU_ITEMS.map((item, index) => (
-              <li
-                className="-mb-px mr-2 last:mr-0 flex-auto text-center"
-                key={index}
-              >
+              <li className=" flex-auto text-center" key={index}>
                 <Link
                   className={
                     "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
@@ -56,7 +48,7 @@ export default function AdminMenu() {
               </li>
             ))}
           </ul>
-          <div className="relative flex flex-col min-w-0 break-words bg-white w-full shadow-lg rounded pb-5">
+          <div className="flex flex-col min-w-0 break-words bg-white dark:bg-[#013440] w-full shadow-lg rounded-lg pb-5">
             <div className="p-5 flex-auto">
               <div className="tab-content tab-space">
                 {MENU_ITEMS.map((item, index) => (
@@ -68,7 +60,13 @@ export default function AdminMenu() {
                     {isLoading ? (
                       <Spinner /> // Render the Spinner component while loading
                     ) : (
-                      <AdminTable data={item.text} />
+                      // Render the DataRecordsTable component with the appropriate data props based on the tab index
+                      <DataRecordsTable
+                        contactForms={index === 0 ? allContactForms : undefined}
+                        applicationForms={
+                          index === 1 ? allApplicationForms : undefined
+                        }
+                      />
                     )}
                   </div>
                 ))}
