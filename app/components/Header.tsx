@@ -8,7 +8,7 @@ import PrimaryButton from "./PrimaryButton";
 
 export default function Header() {
   const {
-    languageContext,
+    language,
     NAV_BAR_ITEMS,
     activeLink,
     setActiveLink,
@@ -23,13 +23,13 @@ export default function Header() {
   return (
     <>
       <header
-        className="-translate-y-24 sticky top-0 z-50 bg-LIGHT_SECONDARY_BG_COLOR  "
+        className="-translate-y-24 sticky top-0 z-50 bg-LIGHT_SECONDARY_BG_COLOR"
         ref={headerRef}
       >
         <div className="mx-auto flex h-16 max-w-screen-3xl items-center justify-between">
           <div className="flex flex-1 items-center justify-end gap-8">
             <nav
-              className="hidden lg:flex lg:gap-4 lg:text-xs lg:font-bold lg:uppercase lg:tracking-widest   opacity-0"
+              className="hidden lg:flex lg:gap-4 lg:text-xs lg:font-bold lg:uppercase lg:tracking-widest opacity-0"
               ref={navItemsRef}
             >
               {NAV_BAR_ITEMS.map((item) => (
@@ -43,9 +43,7 @@ export default function Header() {
                   }`}
                   onClick={() => setActiveLink(item.href)}
                 >
-                  {languageContext.language === "en"
-                    ? item.name.en
-                    : item.name.tr}
+                  {language === "en" ? item.name.en : item.name.tr}
                 </Link>
               ))}
 
@@ -59,7 +57,7 @@ export default function Header() {
                   }`}
                   onClick={() => setActiveLink("/admin/dashboard")}
                 >
-                  Dashboard
+                  {language === "en" ? "DASHBOARD" : "ADMIN PANELİ"}
                 </Link>
               )}
             </nav>
@@ -73,7 +71,7 @@ export default function Header() {
             </div>
             {session && (
               <PrimaryButton
-                label={{ en: "Log out", tr: "LOGOUT" }}
+                label={{ en: "Log out", tr: "Çıkış Yap" }}
                 className="text-white hidden lg:block "
                 onClick={() => signOut()}
               />
