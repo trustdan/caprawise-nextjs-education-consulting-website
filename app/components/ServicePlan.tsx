@@ -37,7 +37,11 @@ export default function ServicePlan({
       <div className="flex justify-center items-baseline my-8" ref={spanRef}>
         <span className="mr-2 text-5xl font-extrabold">${price}</span>
       </div>
-      <ul role="list" className="mb-8 space-y-4 text-left" ref={uRef}>
+      <ul
+        role="list"
+        className="mb-8 space-y-4 text-left flex flex-col last:justify-end"
+        ref={uRef}
+      >
         {features.map((feature) => (
           <li key={feature.en} className="flex items-center space-x-3">
             <svg
