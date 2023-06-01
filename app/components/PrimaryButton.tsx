@@ -7,7 +7,7 @@ interface PrimaryButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
 }
 
-export default function Button({ ...props }: PrimaryButtonProps ) {
+export default function PrimaryButton({ ...props }: PrimaryButtonProps) {
   const language = useLanguageContext().language;
   return (
     <div className="flex justify-center items-center">
