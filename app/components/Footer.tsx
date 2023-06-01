@@ -61,8 +61,8 @@ export default function Footer() {
       <div>
         <p>
           {language === "en"
-            ? "Copyright © 2023 - All right reserved by Helios Admissions"
-            : "Copyright © 2023 - Helios Admissions tarafından tüm hakları saklıdır"}
+            ? "Copyright © 2023,  All rights reserved, Helios Admissions"
+            : "Copyright © 2023,  Tüm hakları saklıdır, Helios Admissions"}
         </p>
       </div>
     </footer>
