@@ -17,7 +17,6 @@ const handler = NextAuth({
       },
       async authorize(credentials, req) {
         // Add logic here to look up the user from the credentials supplied
-        console.log("auth nextauth called!");
         const res = await fetch(process.env.NEXTAUTH_URL + "/api/login", {
           method: "POST",
           body: JSON.stringify({
