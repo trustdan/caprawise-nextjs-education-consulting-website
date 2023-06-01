@@ -11,7 +11,7 @@ interface NavBarItem {
 }
 
 interface IUseHeaderReturn {
-  languageContext: ReturnType<typeof useLanguageContext>;
+  language: string;
   NAV_BAR_ITEMS: NavBarItem[];
   activeLink: string;
   setActiveLink: React.Dispatch<React.SetStateAction<string>>;
@@ -22,7 +22,7 @@ interface IUseHeaderReturn {
 }
 
 export function useHeader(): IUseHeaderReturn {
-  const languageContext = useLanguageContext();
+  const language = useLanguageContext().language;
   const NAV_BAR_ITEMS: NavBarItem[] = [
     {
       name:  {
@@ -52,6 +52,13 @@ export function useHeader(): IUseHeaderReturn {
       },
       href: "/contact",
     },
+    {
+      name: {
+        en: "Apply",
+        tr: "Başvur",
+      },
+      href: "/apply",
+    }
   ];
 
   const [activeLink, setActiveLink] = useState("");
@@ -98,7 +105,7 @@ export function useHeader(): IUseHeaderReturn {
   }, []);
 
   return {
-    languageContext,
+    language,
     NAV_BAR_ITEMS,
     activeLink,
     setActiveLink,

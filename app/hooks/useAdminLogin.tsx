@@ -22,6 +22,7 @@ export function useAdminLogin() {
         redirect: true,
         callbackUrl: "/admin/dashboard",
       });
+      console.log(result)
       return result;
     } catch (error: any) {
       throw new Error("Admin login failed: ", error);
