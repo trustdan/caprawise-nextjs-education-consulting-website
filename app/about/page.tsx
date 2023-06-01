@@ -19,7 +19,7 @@ export default function About() {
         en: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, soluta laborum possimus assumenda dignissimos iste quasi similique est eum facere suscipit quia pariatur neque harum vitae vero debitis corporis? Suscipit dolores, culpa at quia cum ad eum reiciendis quaerat corporis dolorem error, temporibus sed quam minima voluptates soluta eaque accusantium ab deserunt perferendis repudiandae. Tempora esse aperiam molestias eligendi neque ipsam aut a perferendis, cumque ab minima facere odit laudantium velit impedit nam totam corporis amet explicabo sequi. Animi perferendis deleniti quo cum recusandae aut ipsa velit tempora a. Nisi tempore incidunt sed quam vel aperiam aliquid ab a voluptatem.",
         tr: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti in facere repudiandae unde tempore iusto nesciunt illo quam magnam, tenetur maxime pariatur consectetur molestiae vero magni numquam cupiditate ut? Aspernatur doloremque quibusdam incidunt saepe blanditiis pariatur iusto dolorem voluptate veniam, sequi, animi amet? Libero odit, minus nihil fugiat hic illum illo debitis reprehenderit assumenda voluptas explicabo earum magni soluta dolore incidunt quo cum perferendis et excepturi molestiae numquam tempora repellat rerum autem. Explicabo earum quas quo iure impedit, nostrum obcaecati, similique esse saepe, est enim nisi error eum velit consequuntur aspernatur dolor eos. Corrupti ut, ad beatae delectus sapiente laudantium.",
       },
-      imagePath: "/OGUZHANYANGOZ2.jpeg",
+      imagePath: "/yasemin.jpg",
       imageAlt: "Image of Yasemin Karakoç - one of the co-founders",
     },
     {
@@ -29,7 +29,7 @@ export default function About() {
         en: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, soluta laborum possimus assumenda dignissimos iste quasi similique est eum facere suscipit quia pariatur neque harum vitae vero debitis corporis? Suscipit dolores, culpa at quia cum ad eum reiciendis quaerat corporis dolorem error, temporibus sed quam minima voluptates soluta eaque accusantium ab deserunt perferendis repudiandae. Tempora esse aperiam molestias eligendi neque ipsam aut a perferendis, cumque ab minima facere odit laudantium velit impedit nam totam corporis amet explicabo sequi. Animi perferendis deleniti quo cum recusandae aut ipsa velit tempora a. Nisi tempore incidunt sed quam vel aperiam aliquid ab a voluptatem.",
         tr: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti in facere repudiandae unde tempore iusto nesciunt illo quam magnam, tenetur maxime pariatur consectetur molestiae vero magni numquam cupiditate ut? Aspernatur doloremque quibusdam incidunt saepe blanditiis pariatur iusto dolorem voluptate veniam, sequi, animi amet? Libero odit, minus nihil fugiat hic illum illo debitis reprehenderit assumenda voluptas explicabo earum magni soluta dolore incidunt quo cum perferendis et excepturi molestiae numquam tempora repellat rerum autem. Explicabo earum quas quo iure impedit, nostrum obcaecati, similique esse saepe, est enim nisi error eum velit consequuntur aspernatur dolor eos. Corrupti ut, ad ",
       },
-      imagePath: "/OGUZHANYANGOZ2.jpeg",
+      imagePath: "/oguzhan.jpeg",
       imageAlt: "Image of Oğuzhan Yangöz - one of the co-founders",
     },
   ];
