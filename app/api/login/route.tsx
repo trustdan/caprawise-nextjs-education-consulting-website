@@ -6,6 +6,7 @@ import { signJwtAccessToken } from "@/app/lib/jwt";
 export async function POST(request: NextRequest) {
   const body = await request.json();
   const { username, password } = body;
+  console.log(await bcrypt.hash(password, 10));
 
   const user = await prisma.user.findFirst({
     where: {
