@@ -3,22 +3,25 @@ import "./globals.css";
 import Header from "./components/Header";
 import { LanguageProvider } from "./contexts/LanguageProvider";
 import ThemeProviders from "./contexts/ThemeProvider";
-import ThemeChanger from "./contexts/ThemeChanger";
 import Footer from "./components/Footer";
-import { Nunito } from "next/font/google";
+import {
+  Lato,
+} from "next/font/google";
 import QueryProvider from "./contexts/QueryProvider";
 import AuthSessionProvider from "./contexts/AuthSessionProvider";
+import ThemeChanger from "./components/ThemeChanger";
 
 export const metadata = {
-  title: "Education Consulting",
+  title: "Helios Admissions - Study in the USA",
   description:
-    "Official website of  XXX Education Consulting Company based in the United States",
+    "Official website of Helios Education Consulting Company based in the United States",
 };
 
-const nunito = Nunito({
-  weight: ["200", "300", "400", "600", "700", "800"],
+const lato = Lato({
+  weight: ["300", "400", "700"],
   style: ["normal", "italic"],
   subsets: ["latin-ext", "latin"],
+  display: "optional",
 });
 
 interface RootLayoutProps {
@@ -29,7 +32,9 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className={nunito.className}>
+      <body
+        className={`bg-LIGHT_PRIMARY_BG_COLOR dark:bg-DARK_PRIMARY_BG_COLOR ${lato.className}`}
+      >
         <AuthSessionProvider>
           <ThemeProviders>
             <QueryProvider>
