@@ -33,7 +33,7 @@ export default function About() {
       imageAlt: "Image of Oğuzhan Yangöz - one of the co-founders",
     },
   ];
-
+  
   const ABOUT_PAGE_INTRODUCTION = {
     title: {
       en: "Our Team ",
