@@ -20,10 +20,9 @@ export default function ServicePlan({
 
   return (
     <div
-      className="flex flex-col p-3 mx-auto max-w-md text-center text-gray-900
-    bg-LIGHT_PRIMARY_BG_COLOR dark:bg-DARK_PRIMARY_BG_COLOR 
-    border border-black shadow dark:border-gray-600 dark:text-white 
-    lg:hover:scale-105 transition duration-200 ease-in-out  "
+      className="flex flex-col p-6 rounded-lg mx-auto max-w-sm  lg:min-w-full text-center text-gray-900
+    bg-LIGHT_SECONDARY_BG_COLOR dark:bg-DARK_SECONDARY_BG_COLOR dark:text-white 
+    lg:hover:scale-[1.02] transition ease-in-out"
     >
       <h3 className="mb-4 text-2xl font-semibold" ref={hRef}>
         {language === "en" ? name.en : name.tr}
@@ -45,7 +44,7 @@ export default function ServicePlan({
         {features.map((feature) => (
           <li key={feature.en} className="flex items-center space-x-3">
             <svg
-              className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
+              className="flex-shrink-0 w-5 h-5 text-gray-600 dark:text-green-400"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
