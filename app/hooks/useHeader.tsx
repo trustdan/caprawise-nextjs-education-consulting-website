@@ -25,14 +25,21 @@ export function useHeader(): IUseHeaderReturn {
   const language = useLanguageContext().language;
   const NAV_BAR_ITEMS: NavBarItem[] = [
     {
-      name:  {
+      name: {
+        en: "HOME",
+        tr: "ANASAYFA",
+      },
+      href: "/",
+    },
+    {
+      name: {
         en: "ABOUT",
         tr: "HAKKIMIZDA",
       },
       href: "/about",
     },
     {
-      name:  {
+      name: {
         en: "SERVICES",
         tr: "HİZMETLER",
       },
@@ -58,7 +65,7 @@ export function useHeader(): IUseHeaderReturn {
         tr: "Başvur",
       },
       href: "/apply",
-    }
+    },
   ];
 
   const [activeLink, setActiveLink] = useState("");
@@ -73,7 +80,7 @@ export function useHeader(): IUseHeaderReturn {
       setActiveLink(window.location.pathname);
     }
 
-    // GSAP Animations  
+    // GSAP Animations
     const headerAnimation = gsap.to(headerRef.current!, {
       duration: 0.5,
       y: 0,
@@ -96,7 +103,7 @@ export function useHeader(): IUseHeaderReturn {
       opacity: 1,
       ease: "power3.out",
     });
-    
+
     const tl = gsap.timeline();
     tl.add(headerAnimation)
       .add(navItemsAnimation, "-=0.5")
