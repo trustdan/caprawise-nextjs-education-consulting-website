@@ -53,7 +53,7 @@ export default function HomeClient() {
     {
       title: {
         en: "Equity, Diversity and Inclusion Statement Feedback",
-        tr: "Dil, Din, Irk, Cinsiyet Eşitliği ve Kapsayıcılık Mektubu Desteği",
+        tr: "Toplumsal Eşitlik ve Kapsayıcılık Mektubu Desteği",
       },
       description: {
         en: "Embracing diversity is crucial in the US, and it can significantly impact your admissions outcome. Our skilled team will assist you in creating a compelling diversity statement that showcases your distinctive experiences and viewpoints, and underscores your dedication to fostering diversity and inclusion",
@@ -135,7 +135,7 @@ export default function HomeClient() {
   return (
     <main>
       <section
-        className="grid grid-cols-1  place-content-center gap-5 min-h-[calc(100svh-4rem)] px-5"
+        className="grid grid-cols-1  place-content-center gap-10 min-h-[calc(100svh-4rem)] px-5"
         id="home-section-1"
       >
         <div className="gsap-section-1 flex items-center justify-center h-min">
@@ -147,15 +147,14 @@ export default function HomeClient() {
             className="w-[600px] h-fit dark:invert"
           />
         </div>
-
-        <h1 className="gsap-section-1 text-5xl lg:text-6xl lowercase font-semibold max-w-[600px] text-center mx-auto">
+        <h1 className="gsap-section-1 text-5xl lg:text-6xl lowercase font-semibold max-w-[600px] text-center mx-auto pt-2">
           {language === "en"
             ? "We Help You Get Into Your Dream School"
             : "Hayallerinizdeki Okula Girmenize Yardımcı Oluyoruz"}
         </h1>
-        {/* <div className="gsap-section-1">
+        <div className="gsap-section-1">
           <MovingSlider
-            width={500}
+            width={500} // width of the elements in the slider(not the container)
             texts={[
               {
                 en: "Academic English Program",
@@ -166,7 +165,7 @@ export default function HomeClient() {
               { en: "PhD", tr: "Doktora" },
             ]}
           />
-        </div> */}
+        </div>
       </section>
       <section
         id="home-section-2"
