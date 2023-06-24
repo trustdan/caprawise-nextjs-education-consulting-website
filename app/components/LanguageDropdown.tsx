@@ -25,7 +25,7 @@ export function LanguageDropdown() {
       {isDropDownOpen && (
         <ul
           tabIndex={0}
-          className="menu dropdown-content p-0 rounded-box w-36 lg:w-52 mt-4 "
+          className="menu dropdown-content p-0 rounded-box w-36 lg:w-52 mt-3 "
         >
           {LANGUAGES.map((language) => (
             <li

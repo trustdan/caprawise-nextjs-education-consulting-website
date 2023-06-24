@@ -13,7 +13,8 @@ type HamburgerProps = {
 };
 
 export default function Hamburger(props: HamburgerProps) {
-  const { hamburgerRef, isHamburger, setIsHamburger, language } = useHamburger();
+  const { hamburgerRef, isHamburger, setIsHamburger, language } =
+    useHamburger();
   const genericHamburgerLine = `h-[2px] w-6 my-1 rounded-full bg-black transition ease transform duration-300`;
 
   return (
@@ -25,7 +26,7 @@ export default function Hamburger(props: HamburgerProps) {
       {isHamburger && (
         <ul
           tabIndex={0}
-          className="menu dropdown-content p-0 rounded-box w-52 mt-[18px] absolute top-10 right-0 "
+          className="menu dropdown-content p-0 rounded-box w-52 mt-[18px] absolute top-7 right-0 "
         >
           {props.navBarItems.map((item) => (
             <Link
