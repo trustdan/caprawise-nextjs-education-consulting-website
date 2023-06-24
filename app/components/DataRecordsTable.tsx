@@ -29,9 +29,11 @@ const tableHeaders = {
     { label: "Major", accessor: "major" },
     { label: "GPA", accessor: "gpa" },
     { label: "Extracurriculars", accessor: "extracurricular" },
+    { label: "Work Experience", accessor: "workExperience" },
     { label: "English Proficiency", accessor: "englishProficiency" },
     { label: "TOEFL/IELTS", accessor: "toeflIelts" },
     { label: "Familiar with GRE?", accessor: "gre" },
+    { label: "Submitted at?", accessor: "created_at" },
   ],
   contactForms: [
     { label: "UUID", accessor: "id" },
@@ -39,6 +41,7 @@ const tableHeaders = {
     { label: "Email", accessor: "email" },
     { label: "Phone", accessor: "phone" },
     { label: "Question", accessor: "question" },
+    { label: "Submitted at?", accessor: "created_at" },
   ],
 };
 
@@ -77,15 +80,19 @@ export default function DataRecordsTable(data: DataProps) {
 
     return (
       <TableRow key={datum.id}>
-        <TableCell className="w-fit max-w-[350px] border text-center">
+        <TableCell className="w-min max-w-[350px] overflow-wrap break-words whitespace-normal border text-center">
           <Text className="dark:text-gray-300">{index + 1}</Text>
         </TableCell>
         {headers.map((header, index) => (
           <TableCell
-            className="w-fit max-w-[350px] border text-center"
+            className="w-fit max-w-[350px] overflow-wrap break-words whitespace-normal border text-center"
             key={index}
           >
-            <Text className="dark:text-gray-300">{datum[header.accessor]}</Text>
+            <Text className="dark:text-gray-300">
+              {header.accessor === "created_at"
+                ? datum[header.accessor].toString()
+                : datum[header.accessor]}
+            </Text>
           </TableCell>
         ))}
       </TableRow>
