@@ -40,11 +40,16 @@ export const applicationFormSchema = z.object({
     .min(1)
     .max(100)
     .refine((value) => value.trim().length > 0),
-    gpa: z.string().refine(value => {
-      const gpa = parseFloat(value);
-      return gpa >= 1.8 && gpa <= 4.0;
-    }),
+  gpa: z.string().refine((value) => {
+    const gpa = parseFloat(value);
+    return gpa >= 1.8 && gpa <= 4.0;
+  }),
   extracurricular: z
+    .string()
+    .min(1)
+    .max(1000)
+    .refine((value) => value.trim().length > 0),
+  workExperience: z
     .string()
     .min(1)
     .max(1000)
@@ -83,7 +88,7 @@ export const contactFormSchema = z.object({
   phone: z
     .string()
     .min(10)
-    .regex(/^[0-9]+$/),
+    .regex(/^[0-9\+]+$/),
   question: z.string().min(50).max(1000),
 });
 
