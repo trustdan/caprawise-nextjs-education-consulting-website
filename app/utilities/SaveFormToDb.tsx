@@ -8,9 +8,8 @@ export async function saveFormToDb(
   try {
     let data;
     if (formType === "application" && "package" in formData) {
-      // TypeScript knows that formData is ApplicationFormData here
       data = {
-        package: formData.package as string,
+        package: formData.package,
         programType: formData.programType,
         whyUSA: formData.whyUSA,
         academicInterests: formData.academicInterests,
@@ -22,6 +21,7 @@ export async function saveFormToDb(
         major: formData.major,
         gpa: formData.gpa,
         extracurricular: formData.extracurricular,
+        workExperience: formData.workExperience,
         englishProficiency: formData.englishProficiency,
         toeflIelts: formData.toeflIelts,
         gre: formData.gre,
