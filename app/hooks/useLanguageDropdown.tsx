@@ -5,6 +5,7 @@ import {
   MouseEvent,
   SetStateAction,
   useEffect,
+  useRef,
   useState,
 } from "react";
 
@@ -20,11 +21,13 @@ interface UseLanguageDropdownReturn {
   setIsDropDownOpen: Dispatch<SetStateAction<boolean>>;
   handleLanguageSelection: (event: MouseEvent<HTMLLIElement>) => void;
   handleOptionClick: (event: MouseEvent<HTMLLIElement>) => void;
+  dropdownRef: React.RefObject<HTMLDivElement>;
 }
 
 export function useLanguageDropdown(): UseLanguageDropdownReturn {
   const context = useLanguageContext();
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
   const LANGUAGES: Language[] = [
     {
       name: "English",
@@ -44,6 +47,20 @@ export function useLanguageDropdown(): UseLanguageDropdownReturn {
       path: "/",
     });
   }, [context.language]);
+
+  useEffect(() => {
+    const handleClickOutside = (event: any) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDropDownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [setIsDropDownOpen]);
 
   const handleLanguageSelection = (
     event: React.MouseEvent<HTMLLIElement>
@@ -69,5 +86,6 @@ export function useLanguageDropdown(): UseLanguageDropdownReturn {
     setIsDropDownOpen,
     handleLanguageSelection,
     handleOptionClick,
+    dropdownRef,
   };
 }
