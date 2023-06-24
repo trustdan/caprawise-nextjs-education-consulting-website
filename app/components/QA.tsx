@@ -1,7 +1,6 @@
 "use client";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import useQA from "../hooks/useQA";
-import { useRef } from "react";
 
 type QAProps = {
   question: {
@@ -19,11 +18,11 @@ export default function QA({ question, answer }: QAProps) {
 
   return (
     <div
-      className="border-b dark:border-gray-800 rounded-md p-5 mb-2 mx-4 bg-LIGHT_SECONDARY_BG_COLOR dark:bg-DARK_SECONDARY_BG_COLOR dark:text-white transition-colors ease-linear duration-300 hover:shadow-xl cursor-pointer"
+      className="bg-LIGHT_SECONDARY_BG_COLOR dark:bg-DARK_SECONDARY_BG_COLOR border-b dark:border-gray-800 rounded-md p-5 mb-2 mx-5 shadow-lg dark:text-white transition-colors ease-linear duration-200 hover:shadow-xl cursor-pointer"
       ref={QARef}
       onClick={() => setIsOpen(!isOpen)}
     >
-      <div className=" flex justify-between items-center">
+      <div className="flex justify-between items-center transition-all duration-200 ease-linear">
         <h3 className="text-lg font-medium">
           {language === "en" ? question.en : question.tr}
         </h3>
@@ -34,7 +33,9 @@ export default function QA({ question, answer }: QAProps) {
         />
       </div>
       {isOpen && (
-        <p className="mt-4">{language === "en" ? answer.en : answer.tr}</p>
+        <p className="mt-4 text-gray-600">
+          {language === "en" ? answer.en : answer.tr}
+        </p>
       )}
     </div>
   );
