@@ -7,8 +7,11 @@ export default function Footer() {
   const language = useLanguageContext().language;
   const { footerRef } = useFooter();
   return (
-    <footer className="footer footer-center p-5 h-fit bg-LIGHT_PRIMARY_BG_COLOR dark:bg-DARK_PRIMARY_BG_COLOR text-base-content pb-5 gap-8 dark:text-white">
-      <div className="grid grid-flow-col gap-16" ref={footerRef}>
+    <footer
+      className="footer footer-center bg-LIGHT_PRIMARY_BG_COLOR dark:bg-DARK_PRIMARY_BG_COLOR gap-4 py-4 dark:text-white"
+      ref={footerRef}
+    >
+      <div className="flex gap-16">
         <Link
           href="https://twitter.com"
           rel="noopener noreferrer"
@@ -58,13 +61,12 @@ export default function Footer() {
           </svg>
         </Link>
       </div>
-      <div>
-        <p>
-          {language === "en"
-            ? "Copyright © 2023,  All rights reserved, Helios Admissions"
-            : "Copyright © 2023,  Tüm hakları saklıdır, Helios Admissions"}
-        </p>
-      </div>
+      <p>
+        {language === "en"
+          ? "Copyright © 2023 | All Rights Reserved | Helios Admissions"
+          : "Copyright © 2023 | Tüm Hakları Saklıdır | Helios Admissions"}
+      </p>
+      <p>{language === "en" ? "New York, NY, USA" : "New York, NY, ABD"}</p>
     </footer>
   );
 }
