@@ -15,7 +15,7 @@ const handler = NextAuth({
         username: { label: "Username", type: "text", placeholder: "jsmith" },
         password: { label: "Password", type: "password" },
       },
-      async authorize(credentials, req) {
+      async authorize(credentials) {
         // Add logic here to look up the user from the credentials supplied
         const res = await fetch(process.env.NEXTAUTH_URL + "/api/login", {
           method: "POST",
@@ -29,11 +29,11 @@ const handler = NextAuth({
         // You need to provide your own logic here that takes the credentials
 
         if (res.ok && user) {
-          // If you return null or false then the credentials will be rejected
+          // If you return an object with contents the user will be authenticated
           console.log("nextauth user found!");
           return user;
         } else {
-          // If you return an object with contents the user will be authenticated
+          // If you return null or false then the credentials will be rejected
           console.log("nextauth user not found!");
           return null;
         }
