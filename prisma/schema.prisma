@@ -30,6 +30,7 @@ model ApplicationForm {
   major       String
   gpa         String
   extracurricular String
+  workExperience String 
   englishProficiency String
   toeflIelts  String
   gre         String
