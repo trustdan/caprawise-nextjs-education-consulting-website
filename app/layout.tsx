@@ -4,9 +4,7 @@ import Header from "./components/Header";
 import { LanguageProvider } from "./contexts/LanguageProvider";
 import ThemeProviders from "./contexts/ThemeProvider";
 import Footer from "./components/Footer";
-import {
-  Lato,
-} from "next/font/google";
+import { Nunito_Sans } from "next/font/google";
 import QueryProvider from "./contexts/QueryProvider";
 import AuthSessionProvider from "./contexts/AuthSessionProvider";
 import ThemeChanger from "./components/ThemeChanger";
@@ -17,7 +15,7 @@ export const metadata = {
     "Official website of Helios Education Consulting Company based in the United States",
 };
 
-const lato = Lato({
+const nunito_sans = Nunito_Sans({
   weight: ["300", "400", "700"],
   style: ["normal", "italic"],
   subsets: ["latin-ext", "latin"],
@@ -33,7 +31,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body
-        className={`bg-LIGHT_PRIMARY_BG_COLOR dark:bg-DARK_PRIMARY_BG_COLOR ${lato.className}`}
+        className={`bg-LIGHT_PRIMARY_BG_COLOR dark:bg-DARK_PRIMARY_BG_COLOR ${nunito_sans.className}`}
       >
         <AuthSessionProvider>
           <ThemeProviders>
