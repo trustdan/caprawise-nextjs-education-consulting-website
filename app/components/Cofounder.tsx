@@ -19,8 +19,8 @@ export default function Cofounder(props: CofounderProps) {
   const { cofounderRef } = useCofounder();
   return (
     <div
-      className={`flex flex-col lg:flex-row  border-none dark:text-white
-        text-justify mx-auto rounded-xl gap-3 w-[380px] md:w-[1/2] lg:w-[1000px] items-center justify-evenly p-5`}
+      className={`flex flex-col lg:flex-row lg:px-8 px-5 border-none dark:text-white
+        text-justify mx-auto rounded-xl lg:gap-8 gap-5  lg:max-w-[1000px] max-w-[600px] justify-center items-center lg:items-start`}
       ref={cofounderRef}
     >
       <Image
@@ -28,20 +28,16 @@ export default function Cofounder(props: CofounderProps) {
         alt={props.imageAlt}
         width={250}
         height={250}
-        className=" border-[5px]  border-white dark:border-black"
-        placeholder="blur"
-        blurDataURL={props.imagePath}
-        priority={true}
       />
-      <div className="flex flex-col gap-2 w-full lg:w-2/3 h-fit lg:h-[330px] ">
-        <div className="text-xl gap-2 text-center lg:text-left ">
+      <div className="flex flex-col gap-2 lg:gap-5  leading-[1.42] ">
+        <div className="flex flex-col text-xl  text-center lg:text-left lg:mt-[-5px] ">
           <h1 className="font-bold ">{props.name}</h1>
           <h2 className=" font-thin">
             {language === "en" ? "Co-founder" : "Kurucu"}
           </h2>
         </div>
         <div>
-          <p className="text-gray-500 dark:text-gray-400">
+          <p className="text-gray-500">
             {language === "en" ? props.description.en : props.description.tr}
           </p>
         </div>
