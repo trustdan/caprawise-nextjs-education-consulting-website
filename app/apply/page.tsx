@@ -1,7 +1,13 @@
 import PageStyler from "../components/PageStyler";
 import ApplicationForm from "../components/ApplicationForm";
-import RecaptchaProvider from "../components/RecaptchaProvider";
+import RecaptchaProvider from "../contexts/RecaptchaProvider";
 import PageIntroduction from "../components/PageIntroduction";
+
+export const metadata = {
+  title: "Apply | Başvur",
+  description: "Apply | Başvur",
+};
+
 export default function Apply() {
   return (
     <RecaptchaProvider>
@@ -9,12 +15,12 @@ export default function Apply() {
         <main>
           <PageIntroduction
             title={{
-              en: "We are so excited to get your application!",
-              tr: "Başvurunuzu heyecanla bekliyoruz! ",
+              en: "Application Form",
+              tr: "Başvuru Formu",
             }}
             description={{
-              en: "Please fill out the form below so we can get to know you better and assist you in the best way possible. The form consists of 5 parts and should take about 7-8 minutes to complete.",
-              tr: "Size en iyi şekilde yardımcı olabilmemiz için lütfen aşağıdaki formu doldurun. Form 5 kısımdan oluşmaktadır ve doldurması yaklaşık 7-8 dakika sürmektedir.",
+              en: "Please fill out the form below. It consists of 5 parts and will take approximately 10 minutes.",
+              tr: "Lütfen aşağıdaki formu doldurunuz. Form 5 kısımdan oluşmakta olup, yaklaşık 10 dakikanızı alacaktır.",
             }}
           />
           <ApplicationForm />
