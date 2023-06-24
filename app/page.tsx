@@ -1,3 +1,6 @@
+import HomeClient from "./components/HomeClient";
+import PageStyler from "./components/PageStyler";
+
 export const metadata = {
   title: "Homepage | Anasayfa",
   description: "Homepage | Anasayfa",
@@ -5,6 +8,9 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="flex flex-col bg-[yellow] justify-center items-center "></main>
+    <PageStyler>
+      {/*  HomeClient is only a wrapper to avoid using 'use client' in page component for SEO purposes */}
+      <HomeClient />
+    </PageStyler>
   );
 }
