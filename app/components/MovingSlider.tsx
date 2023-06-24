@@ -9,7 +9,7 @@ type MovingSliderProps = {
 export default function MovingSlider(props: MovingSliderProps) {
   const { language } = useLanguageContext();
   return (
-    <div className=" overflow-hidden group whitespace-nowrap mx-[5%] lg:mx-[33%]  relative before:absolute before:top-0 before:left-0 before:w-[100px] before:h-full before:content-[''] before:bg-gradient-pseudo-left dark:before:bg-gradient-pseudo-left-dark before:z-10 after:absolute after:top-0 after:right-0 after:w-[100px] after:h-full after:content-[''] after:bg-gradient-pseudo-right dark:after:bg-gradient-pseudo-right-dark after:z-10  ">
+    <div className="overflow-hidden group whitespace-nowrap max-w-xl px-5  mx-auto relative before:absolute before:top-0 before:left-0 before:w-[100px] before:h-full before:content-[''] before:bg-gradient-pseudo-left dark:before:bg-gradient-pseudo-left-dark before:z-10 after:absolute after:top-0 after:right-0 after:w-[100px] after:h-full after:content-[''] after:bg-gradient-pseudo-right dark:after:bg-gradient-pseudo-right-dark after:z-10  ">
       {[...Array(2)].map((_, index) => (
         <div
           key={index}
