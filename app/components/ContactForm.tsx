@@ -21,34 +21,35 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit(handleMutationSubmit)}
-      className="max-w-sm md:max-w-xl mx-auto p-0 m-0"
+      className="bg-LIGHT_PRIMARY_BG_COLOR dark:bg-DARK_PRIMARY_BG_COLOR dark:text-white text-gray-700 rounded flex flex-col p-5 pt-0 gap-5 mx-auto md:grid md:grid-cols-2 md:w-2/3"
       ref={formRef}
+      method="POST"
     >
-      <div className="mb-4">
+      <div className="col-span-2">
         <label
           htmlFor="fullName"
-          className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2 before:content-['*']"
+          className="block tracking-wide text-grey-darker mb-2 after:content-['*']"
         >
-          {language === "en" ? "Full Name" : "Adınız-Soyadınız"}
+          {language === "en" ? "Full Name" : "Adınız Soyadınız"}
         </label>
         <input
           id="fullName"
           type="text"
           {...register("fullName")} // Register the input with React Hook Form
-          className="appearance-none block w-full bg-grey-lighter text-grey-darker outline-none border-none  rounded py-3 px-4 mb-3"
+          className="appearance-none block w-full bg-grey-lighter text-grey-darker outline-none border-none  rounded py-3 px-4  dark:bg-LIGHT_SECONDARY_BG_COLOR dark:text-black"
         />
         {errors.fullName && ( // Show the error message if any
           <p className="text-sm text-red-500 mt-1">
-           {language === "en"
-              ? "Your full name cannot be empty and cannot contain any numeric characters"
+            {language === "en"
+              ? "Your full name cannot be blank and cannot contain any numeric characters"
               : "Bu alan boş bırakılamaz ve herhangi bir numerik karakter içeremez"}
           </p>
         )}
       </div>
-      <div className="mb-4">
+      <div>
         <label
           htmlFor="email"
-          className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2 before:content-['*']"
+          className="block tracking-wide text-grey-darker mb-2 after:content-['*']"
         >
           {language === "en" ? "Email" : "Email Adresiniz"}
         </label>
@@ -56,7 +57,7 @@ export default function ContactForm() {
           id="email"
           type="email"
           {...register("email")} // Register the input with React Hook Form
-          className="appearance-none block w-full bg-grey-lighter text-grey-darker outline-none border-none  rounded py-3 px-4 mb-3"
+          className="appearance-none block w-full bg-grey-lighter text-grey-darker outline-none border-none  rounded py-3 px-4  dark:bg-LIGHT_SECONDARY_BG_COLOR dark:text-black"
         />
         {errors.email && ( // Show the error message if any
           <p className="text-sm text-red-500 mt-1">
@@ -64,10 +65,10 @@ export default function ContactForm() {
           </p>
         )}
       </div>
-      <div className="mb-4">
+      <div>
         <label
           htmlFor="phone"
-          className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2 before:content-['*']"
+          className="block tracking-wide text-grey-darker mb-2 after:content-['*']"
         >
           {language === "en" ? "Phone Number" : "Telefon Numaranız"}
         </label>
@@ -75,28 +76,27 @@ export default function ContactForm() {
           id="phone"
           type="tel"
           {...register("phone")} // Register the input with React Hook Form
-          className="appearance-none block w-full bg-grey-lighter text-grey-darker outline-none border-none  rounded py-3 px-4 mb-3"
+          className="appearance-none block w-full bg-grey-lighter text-grey-darker outline-none border-none  rounded py-3 px-4  dark:bg-LIGHT_SECONDARY_BG_COLOR dark:text-black"
         />
         {errors.phone && ( // Show the error message if any
           <p className="text-sm text-red-500 mt-1">
             {language === "en"
-              ? "Your contact number must be at least 10 digits"
-              : "Telefon numaranız en az 10 numerik karakterden oluşmalı"}
+              ? "Your contact number must contain a minimum of 10 digits. Only numeric characters, and (+) symbol are allowed"
+              : "Telefon numaraniz en az 10 haneden oluşmalıdır. Sadece rakamlara ve (+) sembolüne izin verilir"}
           </p>
         )}
       </div>
-      <div className="mb-4">
+      <div className="col-span-2">
         <label
           htmlFor="question"
-          className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2 before:content-['*']"
+          className="block tracking-wide text-grey-darker mb-2 after:content-['*']"
         >
           {language === "en" ? "Question" : "Sorunuz"}
         </label>
         <textarea
           id="question"
-          rows={5}
           {...register("question")} // Register the input with React Hook Form
-          className="appearance-none block w-full bg-grey-lighter text-grey-darker outline-none border-none  rounded py-3 px-4 mb-3"
+          className="appearance-none block w-full h-48 bg-grey-lighter text-grey-darker outline-none border-none  rounded py-3 px-4  dark:bg-LIGHT_SECONDARY_BG_COLOR dark:text-black"
         />
         {errors.question && ( // Show the error message if any
           <p className="text-sm text-red-500 mt-1">
@@ -109,15 +109,17 @@ export default function ContactForm() {
           </p>
         )}
       </div>
-      {formSubmissionMutation.isLoading ? (
-        <Spinner />
-      ) : (
-        <PrimaryButton
-          type="submit"
-          label={{ en: "Submit", tr: "Gönder" }}
-          className="w-full"
-        />
-      )}
+      <div className="col-span-2">
+        {formSubmissionMutation.isLoading ? (
+          <Spinner />
+        ) : (
+          <PrimaryButton
+            type="submit"
+            label={{ en: "Submit", tr: "Gönder" }}
+            className="w-full"
+          />
+        )}
+      </div>
       <BasicModal
         open={isModalOpen}
         header={{ success: "🥳", failure: "😞" }}
