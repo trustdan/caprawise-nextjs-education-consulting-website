@@ -26,8 +26,8 @@ export default function Header() {
         className="-translate-y-24 sticky top-0 z-50 bg-LIGHT_SECONDARY_BG_COLOR"
         ref={headerRef}
       >
-        <div className="mx-auto flex h-16 max-w-screen-3xl items-center justify-between">
-          <div className="flex flex-1 items-center justify-end gap-8">
+        <div className="flex h-16 max-w-screen-3xl px-5">
+          <div className="flex flex-1 items-center justify-end gap-4">
             <nav
               className="hidden lg:flex lg:gap-4 lg:text-xs lg:font-bold lg:uppercase lg:tracking-widest opacity-0"
               ref={navItemsRef}
@@ -57,14 +57,13 @@ export default function Header() {
                   }`}
                   onClick={() => setActiveLink("/admin/dashboard")}
                 >
-                  {language === "en" ? "DASHBOARD" : "ADMIN PANELİ"}
+                  {language === "en" ? "DASHBOARD" : "ADMİN PANELİ"}
                 </Link>
               )}
             </nav>
-
             <div
               role="div for gsap effect"
-              className="opacity-0 fixed left-5 lg:relative"
+              className="opacity-0 fixed left-5 lg:relative lg:left-0"
               ref={languageRef}
             >
               <LanguageDropdown />
@@ -72,16 +71,19 @@ export default function Header() {
             {session && (
               <PrimaryButton
                 label={{ en: "Log out", tr: "Çıkış Yap" }}
-                className="text-white hidden lg:block "
+                className="text-white hidden lg:block text-xs font-bold uppercase tracking-widest "
                 onClick={() => signOut()}
               />
-            )}
+            )}  
             <div
               role="div for gsap effect"
-              className="opacity-0"
+              className="opacity-0 lg:hidden"
               ref={hamburgerRef}
             >
-              <Hamburger navBarItems={NAV_BAR_ITEMS} />
+              <Hamburger
+                navBarItems={NAV_BAR_ITEMS}
+                setActiveLink={setActiveLink}
+              />
             </div>
           </div>
         </div>
