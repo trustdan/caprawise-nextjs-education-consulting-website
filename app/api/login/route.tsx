@@ -21,18 +21,19 @@ export async function POST(request: NextRequest) {
       ...userWithoutPass,
       accessToken,
     };
-    return new NextResponse(JSON.stringify(result), {
+    return new NextResponse(JSON.stringify(result ), {
       status: 200,
       headers: {
         "Content-Type": "application/json",
       },
     });
   } else {
-    return new NextResponse(JSON.stringify(null), {
+    return new NextResponse(JSON.stringify({message: "Invalid Credentials"}), {
       status: 401,
       headers: {
         "Content-Type": "application/json",
       },
+      
     });
   }
 }
