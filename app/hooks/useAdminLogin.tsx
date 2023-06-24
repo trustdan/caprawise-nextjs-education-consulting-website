@@ -1,10 +1,12 @@
 import { signIn, useSession } from "next-auth/react";
+import {  useRouter } from "next/navigation";
 import { useRef } from "react";
 
 export function useAdminLogin() {
   const usernameRef = useRef("");
   const passwordRef = useRef("");
   const { data: session } = useSession();
+  const router = useRouter();
 
   const handleAdminLogin = async (event: { preventDefault: () => void }) => {
     event.preventDefault();
@@ -19,13 +21,21 @@ export function useAdminLogin() {
       const result = await signIn("credentials", {
         username: usernameRef.current,
         password: passwordRef.current,
-        redirect: true,
+        // if login is successful, redirect to /admin/dashboard if not dont redirect
+        redirect: false,
         callbackUrl: "/admin/dashboard",
       });
-      console.log(result)
+
+      if (result?.error) {
+        alert("Invalid Credentials - Try again or contact admin");
+      } else {
+        router.push("/admin/dashboard");
+      }
+
+      console.log(result);
       return result;
     } catch (error: any) {
-      throw new Error("Admin login failed: ", error);
+      throw new Error("Error while authenticating admin/user ", error);
     }
   };
 
