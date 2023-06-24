@@ -6,11 +6,37 @@ import {
   sendApplicationEmailToHelios,
   sendEmailToUser,
 } from "@/app/utilities/SendEmail";
+import { contactFormSchema, applicationFormSchema } from "@/app/lib/zod";
 
 export async function POST(request: NextRequest) {
   if (request.method === "POST") {
     // Get the form data and the token from the request body
     const { formData, token, formType } = await request.json();
+    //Check if the form data matches one of the Zod form schemas we have
+    let isFormValid = false;
+    try {
+      if (formType === "contact") {
+        contactFormSchema.parse(formData);
+        isFormValid = true;
+      } else if (formType === "application") {
+        applicationFormSchema.parse(formData);
+        isFormValid = true;
+      }
+    } catch (error) {
+      console.log(error);
+      return new NextResponse(
+        JSON.stringify({
+          message: "Invalid form schema/data",
+        }),
+        {
+          status: 400,
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+    }
+    
     if (formData && token && formType) {
       // 1.verify captcha
       const isCaptchaValid = await verifyRecaptcha(token);
