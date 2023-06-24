@@ -13,7 +13,7 @@ export default function PrimaryButton({ ...props }: PrimaryButtonProps) {
     <div className="flex justify-center items-center">
       <button
         {...props}
-        className={`bg-black hover:bg-blue-600 text-white font-medium px-4 py-2 rounded active:scale-90 transition-all duration-200 ${props.className} `}
+        className={`bg-black hover:bg-blue-600 text-white text-lg font-medium px-4 py-2 rounded active:scale-90 transition-all duration-200 ${props.className} `}
       >
         {language === "en" ? props.label.en : props.label.tr}
       </button>
