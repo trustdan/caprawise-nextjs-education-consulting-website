@@ -12,8 +12,8 @@ export const metadata = {
 export default function Services() {
   const PAGE_INTRO_DATA = {
     title: {
-      en: "Exploring graduate-level education opportunities in the US?",
-      tr: "ABD'de lisansüstü eğitim fırsatları mı arıyorsunuz?",
+      en: "Our Services",
+      tr: "Hizmetlerimiz",
     },
     description: {
       en: "We know how daunting the grad school applications in the US can be. Here at Helios Admissions, we are offering a variety of services to help you with the entire application process.",
@@ -76,7 +76,7 @@ export default function Services() {
       },
       price: 1500,
       description: {
-        en: "Standard assistance with the entire application process",
+        en: "Standard assistance with the application process",
         tr: "10 okula kadar başvuru sürecinin tamamında destek",
       },
       features: [
@@ -113,7 +113,7 @@ export default function Services() {
       },
       price: 3000,
       description: {
-        en: "The highest level of assistance with the entire application process",
+        en: "The highest level of assistance with the application process",
         tr: "10 okula kadar başvuru sürecinin tamamında en üst düzeyde destek",
       },
       features: [
@@ -138,13 +138,13 @@ export default function Services() {
   ];
   return (
     <PageStyler>
-      <main className="flex flex-col gap-0 transition-colors ease-linear duration-300 w-full">
-        <div className="px-4 mx-auto max-w-screen-xl lg:px-6">
+      <main className="flex flex-col transition-colors ease-linear duration-200">
+        <div className="px-4 mx-auto  lg:px-6">
           <PageIntroduction
             title={PAGE_INTRO_DATA.title}
             description={PAGE_INTRO_DATA.description}
           />
-          <div className="space-y-8 lg:grid lg:grid-cols-3  md:grid-cols-2 sm:gap-6 xl:gap-10 lg:space-y-0">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-10 ">
             {SERVICE_PLANS.map((plan, index) => (
               <ServicePlan
                 key={index}
@@ -155,7 +155,9 @@ export default function Services() {
               />
             ))}
           </div>
-          <Footnotes footnotes={footnotes} />
+          <div className="col-span-1 max-w-sm lg:max-w-full  mx-auto lg:mx-0 lg:col-span-3 pt-5 lg:pt-8">
+            <Footnotes footnotes={footnotes} />
+          </div>
         </div>
       </main>
     </PageStyler>
