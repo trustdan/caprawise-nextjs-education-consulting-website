@@ -11,19 +11,20 @@ type QAProps = {
     en: string;
     tr: string;
   };
+  order: number;
 };
 
-export default function QA({ question, answer }: QAProps) {
-  const { isOpen, setIsOpen, language, QARef } = useQA();
+export default function QA({ question, answer, order }: QAProps) {
+  const { isOpen, setIsOpen, language } = useQA();
 
   return (
     <div
-      className="bg-LIGHT_SECONDARY_BG_COLOR dark:bg-DARK_SECONDARY_BG_COLOR border-b dark:border-gray-800 rounded-md p-5 mb-2 mx-5 shadow-lg dark:text-white transition-colors ease-linear duration-200 hover:shadow-xl cursor-pointer"
-      ref={QARef}
+      className="gsap-qa bg-LIGHT_SECONDARY_BG_COLOR dark:bg-DARK_SECONDARY_BG_COLOR border-b dark:border-gray-800 rounded-md p-5 mb-2 mx-5 shadow-lg dark:text-white transition-colors ease-linear duration-200 hover:shadow-xl cursor-pointer"
       onClick={() => setIsOpen(!isOpen)}
     >
       <div className="flex justify-between items-center transition-all duration-200 ease-linear">
-        <h3 className="text-lg font-medium">
+        <h3 className="text-lg font-medium w-[95%]">
+          <span className="pr-3">{order}.</span>
           {language === "en" ? question.en : question.tr}
         </h3>
         <ChevronDownIcon
@@ -33,7 +34,7 @@ export default function QA({ question, answer }: QAProps) {
         />
       </div>
       {isOpen && (
-        <p className="mt-4 text-gray-600">
+        <p className="mt-4 text-gray-500 text-justify">
           {language === "en" ? answer.en : answer.tr}
         </p>
       )}
