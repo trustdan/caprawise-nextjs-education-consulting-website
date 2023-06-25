@@ -147,10 +147,10 @@ export default function HomeClient() {
             className="w-[600px] h-fit dark:invert"
           />
         </div>
-        <h1 className="gsap-section-1 text-5xl lg:text-6xl lowercase font-semibold max-w-[600px] text-center mx-auto pt-2">
+        <h1 className="gsap-section-1 text-5xl lg:text-6xl font-semibold max-w-[600px] text-center mx-auto pt-2">
           {language === "en"
-            ? "We Help You Get Into Your Dream School"
-            : "Hayallerinizdeki Okula Girmenize Yardımcı Oluyoruz"}
+            ? "Boost Your Career With a US Graduate Degree"
+            : "ABD Diplomasıyla Kariyerinizde Fark Yaratın"}
         </h1>
         <div className="gsap-section-1">
           <MovingSlider
