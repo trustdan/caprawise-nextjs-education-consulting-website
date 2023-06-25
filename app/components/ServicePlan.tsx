@@ -44,7 +44,7 @@ export default function ServicePlan({
         {features.map((feature) => (
           <li key={feature.en} className="flex items-center space-x-3">
             <svg
-              className="flex-shrink-0 w-5 h-5 text-gray-600 dark:text-green-400"
+              className="flex-shrink-0 w-5 h-5 text-gray-500 dark:text-green-400"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"

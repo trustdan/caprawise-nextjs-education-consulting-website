@@ -203,7 +203,7 @@ export default function HomeClient() {
           />
 
           {language === "en" ? (
-            <p className="text-justify min-h-full flex-1 text-gray-500">
+            <p className="text-justify min-h-full flex-1 text-gray-500 dark:text-gray-400">
               Helios Admissions provides professional consultancy services to
               candidates who want to study in the USA. Since its establishment,
               our company has carried out comprehensive studies on academic
@@ -228,7 +228,7 @@ export default function HomeClient() {
               and ensure that the service quality is high.
             </p>
           ) : (
-            <p className="text-justify min-h-full flex-1  text-gray-500">
+            <p className="text-justify min-h-full flex-1  text-gray-500 dark:text-gray-400">
               Helios Admissions Amerika’da eğitim almak isteyen adaylara
               profesyonel danışmanlık hizmeti vermektedir. Şirketimiz kurulduğu
               günden günümüze kadar pek çok alanda akademik danışmanlık üzerine

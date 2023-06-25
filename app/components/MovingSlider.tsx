@@ -20,7 +20,7 @@ export default function MovingSlider(props: MovingSliderProps) {
           {props.texts.map((text, index) => (
             <div
               key={index}
-              className="rounded-xl  text-gray-600 dark:text-gray-300 mx-16"
+              className="rounded-xl  text-gray-500 dark:text-gray-400 mx-16"
             >
               <h1 className={`p-2 w-${props.width}`}>
                 {language === "en" ? text.en : text.tr}

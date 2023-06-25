@@ -29,15 +29,15 @@ export default function Cofounder(props: CofounderProps) {
         width={250}
         height={250}
       />
-      <div className="flex flex-col gap-2 lg:gap-5  leading-[1.42] ">
-        <div className="flex flex-col text-xl  text-center lg:text-left lg:mt-[-5px] ">
+      <div className="flex flex-col gap-2 lg:gap-5 leading-[1.42]">
+        <div className="flex flex-col text-xl text-center lg:text-left lg:mt-[-5px] ">
           <h1 className="font-bold ">{props.name}</h1>
-          <h2 className=" font-thin">
+          <h2 className="font-thin">
             {language === "en" ? "Co-founder" : "Kurucu"}
           </h2>
         </div>
         <div>
-          <p className="text-gray-500">
+          <p className="text-gray-500 dark:text-gray-400">
             {language === "en" ? props.description.en : props.description.tr}
           </p>
         </div>

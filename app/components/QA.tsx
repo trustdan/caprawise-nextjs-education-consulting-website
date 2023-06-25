@@ -34,7 +34,7 @@ export default function QA({ question, answer, order }: QAProps) {
         />
       </div>
       {isOpen && (
-        <p className="mt-4 text-gray-500 text-justify">
+        <p className="mt-4 text-gray-500 dark:text-gray-400  text-justify">
           {language === "en" ? answer.en : answer.tr}
         </p>
       )}
