@@ -2,8 +2,9 @@ import PageStyler from "../components/PageStyler";
 import ApplicationForm from "../components/ApplicationForm";
 import RecaptchaProvider from "../contexts/RecaptchaProvider";
 import PageIntroduction from "../components/PageIntroduction";
+import type { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Apply | Başvur",
   description: "Apply | Başvur",
 };

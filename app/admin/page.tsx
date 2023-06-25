@@ -1,7 +1,8 @@
 import AdminLogin from "../components/AdminLogin";
 import PageStyler from "../components/PageStyler";
+import type { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Admin Login | Admin Girişi",
   description: "Admin Page",
 };

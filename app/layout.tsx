@@ -10,9 +10,10 @@ import AuthSessionProvider from "./contexts/AuthSessionProvider";
 import ThemeChanger from "./components/ThemeChanger";
 
 export const metadata = {
-  title: "Helios Admissions - Study in the USA",
+  title:
+    "Helios Admisisons - Amerika'da Yüksek lisans, Doktora ve Dil Okulu Danışmanlığı | Helios Admissions - Graduate School, PhD and Language School Consulting in the United States ",
   description:
-    "Official website of Helios Education Consulting Company based in the United States",
+    "ABD merkezli Helios Admissions Resmi Web Sitesi | Official website of Helios Education Consulting Company based in the United States",
 };
 
 const nunito_sans = Nunito_Sans({

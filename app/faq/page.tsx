@@ -1,8 +1,9 @@
 import QA from "../components/QA";
 import PageIntroduction from "../components/PageIntroduction";
 import PageStyler from "../components/PageStyler";
+import type { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "FAQ | SSS",
   description: "Frequently Asked Questions | Sıkça Sorulan Sorular",
 };
@@ -56,7 +57,7 @@ export default function FAQ() {
         tr: "İngilizcemin ABD'de bir okula başvurmak için yeterli olup olmadığından emin değilim. Bana bu konuda yardımcı olabilir misiniz?",
       },
       answer: {
-        en: "Yes, absolutely we can. Our team members have experienced English teachers with a Master's Degree and PhD. We will evaluate your English level together and let you know if it is good enough for your application.",
+        en: "Yes, absolutely we can. Our team has experienced English language teachers with a Master's Degree and PhD. We will evaluate your English level together and let you know if it is good enough for your application.",
         tr: "Evet, kesinlikle. Ekibimizde yüksek lisans ve doktora derecesine sahip deneyimli ingilizce öğretmenleri bulunmaktadır. Başvurunuzdan önce ingilizcenizi birlikte değerlendirip, başvuru için yeterli olup olmadığını sizinle paylaşacağız.",
       },
     },
@@ -97,7 +98,7 @@ export default function FAQ() {
       },
       answer: {
         en: "Yes, Helios Admissions is based in the US. However, Helios Admissions is also registered in Turkey. Our team members reside in New York City and Chicago.",
-        tr: "Evet, Helios Admissions ABD merkezli olup, aynı zamanda Türkiye'de de kayıtlıdır. Ekip üyelerimiz New York ve Chicago'da yaşamaktadır.",
+        tr: "Evet, Helios Admissions ABD merkezli olup, aynı zamanda Türkiye'de de kayıtlıdır. Ekip üyelerimiz New York ve Chicago'da ikamet etmektedir.",
       },
     },
     {
@@ -116,8 +117,8 @@ export default function FAQ() {
         tr: "Lisans not ortalamam 2.5'ın altında. Yine de ABD üniversitelerine başvurabilir miyim?",
       },
       answer: {
-        en: "While most schools have a GPA cutoff, it is possible to explain why your gpa is low in your statement of purpose and still get accepted. We can help you with that.",
-        tr: "Birçok okulun not ortalaması sınırı olsa da, niyet mektubunuz da not ortalamanızın neden düşük olduğunu detaylıca açıklayıp, kabul alabilirsiniz. Bu konuda size yardımcı olabiliriz.",
+        en: "While most schools have a GPA cutoff, it is possible to explain why your gpa is low in your statement of purpose and still get accepted.",
+        tr: "Birçok okulun belirlediği minimum bir not ortalaması olsa da, niyet mektubunuz da not ortalamanızın neden düşük olduğunu detaylıca açıklayıp, kabul alabilirsiniz.",
       },
     },
     {
@@ -147,7 +148,7 @@ export default function FAQ() {
       },
       answer: {
         en: "For Master's programs, it is very difficult to get a full-ride scholarship. However, getting a full-ride scholarship for PhD programs is much more likely.That being said, there are some external scholarship programs that cover all your educational expenses such as the Fulbright Scholarship.",
-        tr: "Yüksek lisans programları için tam burs almak çok zordur. Ancak, doktora programları için tam burs almak çok daha olasıdır. Bununla birlikte, Fulbright Bursu gibi tüm eğitim masraflarınızı karşılayan bazı harici burs programları bulunmaktadır.",
+        tr: "Yüksek lisans programları için tam burs imkanları çok kısıtlıdır. Ancak, doktora programları için tam burs almak çok daha olasıdır. Bununla birlikte, Fulbright Bursu gibi tüm eğitim masraflarınızı karşılayan bazı harici burs programları bulunmaktadır.",
       },
     },
     {
@@ -157,7 +158,7 @@ export default function FAQ() {
       },
       answer: {
         en: "For undergraduate students, we only provide short-term language school programs. We do not provide services for undergraduate admissions.",
-        tr: "Lisans öğrencileri için sadece kısa süreli dil okulu programları sağlıyoruz. Lisans programı kabulleri için hizmet vermiyoruz.",
+        tr: "Lisans öğrencileri için sadece kısa süreli dil okulu programları sağlıyoruz. Lisans programı başvuruları için hizmet vermiyoruz.",
       },
     },
     {
@@ -167,7 +168,7 @@ export default function FAQ() {
       },
       answer: {
         en: "No, there are no age restrictions for graduate programs. Students of all ages are welcome to apply.",
-        tr: "Hayır, yüksek lisans ve doktora programları için yaş sınırı yoktur. Tüm yaşlardaki öğrenciler başvurabilir.",
+        tr: "Hayır, yüksek lisans ve doktora programları için yaş sınırı yoktur. Her yaş grubundan öğrenciler başvurabilir.",
       },
     },
   ];

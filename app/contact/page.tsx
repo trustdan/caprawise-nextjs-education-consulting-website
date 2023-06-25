@@ -2,8 +2,9 @@ import PageStyler from "../components/PageStyler";
 import ContactForm from "../components/ContactForm";
 import PageIntroduction from "../components/PageIntroduction";
 import RecaptchaProvider from "../contexts/RecaptchaProvider";
+import type { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Contact | İletişim",
   description: "Contact us | Bize ulaşın",
 };

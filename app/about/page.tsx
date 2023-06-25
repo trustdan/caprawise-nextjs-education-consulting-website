@@ -1,8 +1,9 @@
 import Cofounder from "../components/Cofounder";
 import PageIntroduction from "../components/PageIntroduction";
 import PageStyler from "../components/PageStyler";
+import type { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "About | Hakkımızda",
   description: "About us | Hakkımızda",
 };
@@ -16,8 +17,8 @@ export default function About() {
         tr: "Kurucu",
       },
       description: {
-        en: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, soluta laborum possimus assumenda dignissimos iste quasi similique est eum facere suscipit quia pariatur neque harum vitae vero debitis corporis? Suscipit dolores, culpa at quia cum ad eum reiciendis quaerat corporis dolorem error, temporibus sed quam minima voluptates soluta eaque accusantium ab deserunt perferendis repudiandae. Tempora esse aperiam molestias eligendi neque ipsam aut a perferendis, cumque ab minima facere odit laudantium velit impedit nam totam corporis amet explicabo sequi. Animi perferendis deleniti quo cum recusandae aut ipsa velit tempora a. Nisi tempore incidunt sed quam vel aperiam aliquid ab a voluptatem.",
-        tr: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti in facere repudiandae unde tempore iusto nesciunt illo quam magnam, tenetur maxime pariatur consectetur molestiae vero magni numquam cupiditate ut? Aspernatur doloremque quibusdam incidunt saepe blanditiis pariatur iusto dolorem voluptate veniam, sequi, animi amet? Libero odit, minus nihil fugiat hic illum illo debitis reprehenderit assumenda voluptas explicabo earum magni soluta dolore incidunt quo cum perferendis et excepturi molestiae numquam tempora repellat rerum autem. Explicabo earum quas quo iure impedit, nostrum obcaecati, similique esse saepe, est enim nisi error eum velit consequuntur aspernatur dolor eos. Corrupti ut, ad beatae delectus sapiente laudantium.",
+        en: "Karakoç has a bachelor’s degree in American Culture and Literature from Istanbul University, an MA in Educational Administration and Supervision from Yeditepe University, and a PhD in Educational Technology from Bahçeşehir University. She is currently a faculty member at Istanbul Medipol University’s Faculty of Business and Management Sciences. She is also the deputy director of the University’s Distance Education Application and Research Center and a member of the Accreditation and Quality Unit. Karakoc, whose areas of specialization are research methods, educational statistics, instructional design, and English language teaching, has provided education and consultancy services to hundreds of students during her 15-year professional life.",
+        tr: "İstanbul Üniversitesi Amerikan Kültürü ve Edebiyatı lisans, Yeditepe Üniversitesi Eğitim Yönetimi ve Denetimi Yüksek Lisans, Bahçeşehir Üniversitesi Eğitim Teknolojileri doktora derecelerine sahip olan Karakoç, halen İstanbul Medipol Üniversitesi İşletme ve Yönetim Bilimleri Fakültesi’nde öğretim üyeliği yapmaktadır. Karakoç aynı zamanda üniversitenin Uzaktan Eğitim Uygulama ve Araştırma Merkezi müdür yardımcısı ve Akreditasyon ve Kalite Birimi üyesidir. Uzmanlık alanları araştırma yöntemleri, eğitim istatistiği, öğretim tasarımı, İngilizce dil öğretimi olan Karakoç, 15 yıllık profesyonel kariyeri süresince yüzlerce öğrenciye eğitim ve danışmanlık hizmeti vermiştir.",
       },
       imagePath: "/yasemin.webp",
       imageAlt: "Image of Yasemin Karakoç - one of the co-founders",
@@ -26,22 +27,22 @@ export default function About() {
       name: "Oğuzhan Yangöz",
       title: "Co-founder",
       description: {
-        en: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, soluta laborum possimus assumenda dignissimos iste quasi similique est eum facere suscipit quia pariatur neque harum vitae vero debitis corporis? Suscipit dolores, culpa at quia cum ad eum reiciendis quaerat corporis dolorem error, temporibus sed quam minima voluptates soluta eaque accusantium ab deserunt perferendis repudiandae. Tempora esse aperiam molestias eligendi neque ipsam aut a perferendis, cumque ab minima facere odit laudantium velit impedit nam totam corporis amet explicabo sequi. Animi perferendis deleniti quo cum recusandae aut ipsa velit tempora a. Nisi tempore incidunt sed quam vel aperiam aliquid ab a voluptatem.",
-        tr: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti in facere repudiandae unde tempore iusto nesciunt illo quam magnam, tenetur maxime pariatur consectetur molestiae vero magni numquam cupiditate ut? Aspernatur doloremque quibusdam incidunt saepe blanditiis pariatur iusto dolorem voluptate veniam, sequi, animi amet? Libero odit, minus nihil fugiat hic illum illo debitis reprehenderit assumenda voluptas explicabo earum magni soluta dolore incidunt quo cum perferendis et excepturi molestiae numquam tempora repellat rerum autem. Explicabo earum quas quo iure impedit, nostrum obcaecati, similique esse saepe, est enim nisi error eum velit consequuntur aspernatur dolor eos. Corrupti ut, ad ",
+        en: "Yangöz has a bachelor’s and master’s degree in Foreign Language Education from Yıldız Technical University. After working as a lecturer for three years, he was awarded a Fulbright scholarship and worked as a teaching assistant at Yale University where he also took graduate-level courses in Computer Science and Data Science. After completing the Fulbright program, he completed his second Master's Degree in Computer Science with focus on Cognition and Machine Intelligence at George Washington University. His areas of interest include Distributed Systems and Cloud Computing, and he has helped many of his students with their graduate studies abroad since the beginning of his career.",
+        tr: "Yıldız Teknik Üniversitesi’nden Yabancı Dil Eğitimi alanında lisans ve yüksek lisans diploması bulunan Yangöz, üç yıl boyunca öğretim görevlisi olarak çalıştıktan sonra Fulbright bursiyeri olarak Yale Üniversitesi’nde asistanlık yapmış, aynı zamanda Bilgisayar Bilimleri ve Veri Bilimi alanlarında yüksek lisans seviyesinde dersler almıştır. Fulbright programını tamamladıktan sonra ise, George Washington Üniversitesi’nde Bilgisayar Bilimleri alanında Makine Öğrenmesi ve Doğal Dil İşleme alanlarına yoğunlaşarak yüksek lisansını tamamlamıştır. İlgi alanları Dağınık Sistemler (Distributed Systems) ve Bulut Bilişim (Cloud Computing) olup, öğretim görevliliğinden günümüze kadar birçok öğrencisine yurtdışında lisansüstü eğitim konusunda yardımcı olmuştur. ",
       },
       imagePath: "/oguzhan.webp",
       imageAlt: "Image of Oğuzhan Yangöz - one of the co-founders",
     },
   ];
-  
+
   const ABOUT_PAGE_INTRODUCTION = {
     title: {
       en: "Our Team ",
       tr: "Ekibimiz",
     },
     description: {
-      en: "We are a group of people who are passionate about helping others. We are here to help you.",
-      tr: "Bizler, başkalarına yardım etmekten keyif alan bir grup insanız. Sizin yardımınız için buradayız.",
+      en: "Our team members have completed their master's and doctoral degrees and are currently residing in the United States.",
+      tr: "Ekip üyelerimiz yüksek lisans ve doktora süreçlerinden geçmiş olup, şu anda ABD'de ikamet eden kişilerden oluşmaktadır.",
     },
   };
 
