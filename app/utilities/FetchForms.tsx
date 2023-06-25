@@ -1,4 +1,5 @@
 "use server";
+// server actions - removing use server will throw an error
 import prisma from "../lib/prisma";
 export async function fetchContactForms() {
   return await prisma.contactForm.findMany({
