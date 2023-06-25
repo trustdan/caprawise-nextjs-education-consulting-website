@@ -19,7 +19,7 @@ export default function Cofounder(props: CofounderProps) {
   const { cofounderRef } = useCofounder();
   return (
     <div
-      className={`flex flex-col lg:flex-row lg:px-8 px-5 border-none dark:text-white
+      className={`flex flex-col lg:flex-row lg:px-8 border-none dark:text-white
         text-justify mx-auto rounded-xl lg:gap-8 gap-5  lg:max-w-[1000px] max-w-[600px] justify-center items-center lg:items-start`}
       ref={cofounderRef}
     >
