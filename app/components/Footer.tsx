@@ -60,13 +60,33 @@ export default function Footer() {
             <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
           </svg>
         </Link>
+        <Link
+          href="mailto:info@heliosadmissions.com"
+          rel="noopener noreferrer"
+          target="_blank"
+          className="hover:cursor-pointer hover:scale-150 transition-all duration-300 active:scale-90"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            className="fill-current"
+          >
+            <path d="M20,4H4C2.897,4,2,4.897,2,6v12c0,1.103,0.897,2,2,2h16c1.103,0,2-0.897,2-2V6C22,4.897,21.103,4,20,4z M20,8.236l-8,4.882 L4,8.236V6h16V8.236z" />
+          </svg>
+        </Link>
       </div>
       <p>
         {language === "en"
           ? "Copyright © 2023 | All Rights Reserved | Helios Admissions"
           : "Copyright © 2023 | Tüm Hakları Saklıdır | Helios Admissions"}
       </p>
-      <p>{language === "en" ? "5929 N Campbell Ave, Chicago, USA" : "5929 N Campbell Ave, Chicago, ABD"}</p>
+      <p>
+        {language === "en"
+          ? "5929 N Campbell Ave, Chicago, USA"
+          : "5929 N Campbell Ave, Chicago, ABD"}
+      </p>
     </footer>
   );
 }
