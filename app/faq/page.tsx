@@ -27,7 +27,7 @@ export default function FAQ() {
         tr: "Başvurulan okullara kesin kabul garantisi veriyor musunuz?",
       },
       answer: {
-        en: "No, we do not guarantee admission to the schools applied for. We do NOT recommend applying to low-tier schools that accept everyone for a fee under any circumstances. It is crucial for us to diligently evaluate every school the students apply for and make sure that they are a good fit for the student.",
+        en: "No, we do not guarantee admission to the schools applied for. We do not recommend applying to low-tier schools that accept everyone for a fee under any circumstances. It is crucial for us to diligently evaluate every school the students apply for and make sure that they are a good fit for our students.",
         tr: "Hayır, başvurulan okullara kesin kabul garantisi vermiyoruz, veren kişi ve kuruluşlardan da uzak durmanızı tavsiye ediyoruz. Herkesi ücret karşılığında kabul eden düşük seviyeli okulları kesinlikle önermiyoruz. Öğrencilerin başvurdukları her okulu titizlikle değerlendirmek ve öğrencilerimiz için uygun olup olmadığından emin olmak en temel prensiplerimizdendir.",
       },
     },
