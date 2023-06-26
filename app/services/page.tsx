@@ -74,7 +74,7 @@ export default function Services() {
         en: "Standard Package",
         tr: "Standart Paket",
       },
-      price: 1500,
+      price: 999,
       description: {
         en: "Standard assistance with the application process",
         tr: "10 okula kadar başvuru sürecinin tamamında destek",
@@ -111,7 +111,7 @@ export default function Services() {
         en: "Full Package",
         tr: "Full Paket",
       },
-      price: 3000,
+      price: 1999,
       description: {
         en: "The highest level of assistance with the application process",
         tr: "10 okula kadar başvuru sürecinin tamamında en üst düzeyde destek",
