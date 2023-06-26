@@ -12,7 +12,6 @@
     "@babel/runtime": "^7.22.3",
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
-    "@fortawesome/react-fontawesome": "github:fortawesome/react-fontawesome",
     "@heroicons/react": "^1.0.6",
     "@hookform/resolvers": "^3.1.0",
     "@mui/material": "^5.13.0",
