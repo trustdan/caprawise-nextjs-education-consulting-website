@@ -66,7 +66,7 @@ export default function Footer() {
           ? "Copyright © 2023 | All Rights Reserved | Helios Admissions"
           : "Copyright © 2023 | Tüm Hakları Saklıdır | Helios Admissions"}
       </p>
-      <p>{language === "en" ? "New York, NY, USA" : "New York, NY, ABD"}</p>
+      <p>{language === "en" ? "5929 N Campbell Ave, Chicago, USA" : "5929 N Campbell Ave, Chicago, ABD"}</p>
     </footer>
   );
 }
