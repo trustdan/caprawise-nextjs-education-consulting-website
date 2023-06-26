@@ -85,7 +85,7 @@ export default function Services() {
           tr: "10 üniversiteye kadar başvuru desteği",
         },
         {
-          en: "Feedback on the Statement of Purpose with regards to grammar and coherence.",
+          en: "Feedback on the Statement of Purpose with regards to grammar and coherence",
           tr: "Niyet mektubuna dair dilbilgisi ve tutarlılık açısından geri bildirim",
         },
         {
