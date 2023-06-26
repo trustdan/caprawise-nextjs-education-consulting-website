@@ -30,12 +30,12 @@ export function useLanguageDropdown(): UseLanguageDropdownReturn {
   const dropdownRef = useRef<HTMLDivElement>(null);
   const LANGUAGES: Language[] = [
     {
-      name: "English",
+      name: context.language === "en" ? "ENGLISH" : "İNGİLİZCE",
       code: "en",
     },
 
     {
-      name: "Turkish",
+      name: context.language === "en" ? "TURKISH" : "TÜRKÇE",
       code: "tr",
     },
   ];
