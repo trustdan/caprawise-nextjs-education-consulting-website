@@ -79,7 +79,6 @@ export default function HomeClient() {
     tl.fromTo(
       ".gsap-section-1",
       {
-        opacity: 0,
         scale: 0.9,
       },
       {
@@ -138,21 +137,22 @@ export default function HomeClient() {
         className="grid grid-cols-1  place-content-center gap-10 min-h-[calc(100svh-4rem)] px-5"
         id="home-section-1"
       >
-        <div className="gsap-section-1 flex items-center justify-center h-min">
+        <div className="gsap-section-1 flex items-center justify-center h-min opacity-0">
           <Image
             src={"/998.svg"}
             alt="a graduation cap doodle"
             width={0}
             height={0}
             className="w-[600px] h-fit dark:invert"
+            priority={true}
           />
         </div>
-        <h1 className="gsap-section-1 text-5xl lg:text-6xl font-semibold max-w-[600px] text-center mx-auto pt-2">
+        <h1 className="gsap-section-1 text-5xl lg:text-6xl font-semibold max-w-[600px] text-center mx-auto pt-2 opacity-0">
           {language === "en"
             ? "Boost Your Career With a US Graduate Degree"
             : "ABD Diplomasıyla Kariyerinizde Fark Yaratın"}
         </h1>
-        <div className="gsap-section-1">
+        <div className="gsap-section-1 opacity-0">
           <MovingSlider
             width={500} // width of the elements in the slider(not the container)
             texts={[
