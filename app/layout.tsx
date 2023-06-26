@@ -8,6 +8,7 @@ import { Nunito_Sans } from "next/font/google";
 import QueryProvider from "./contexts/QueryProvider";
 import AuthSessionProvider from "./contexts/AuthSessionProvider";
 import ThemeChanger from "./components/ThemeChanger";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   title:
@@ -41,6 +42,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 <Header />
                 <ThemeChanger />
                 {children}
+                <Analytics />
                 <Footer />
               </LanguageProvider>
             </QueryProvider>
