@@ -27,7 +27,7 @@ export default function FAQ() {
         tr: "Başvurulan okullara kesin kabul garantisi veriyor musunuz?",
       },
       answer: {
-        en: "No, we do not guarantee admission to the schools applied for. Under no circumstancens, we recommend applying to low-tier schools that accept everyone for a fee. It is crucial for us to diligently evaluate every school the students apply for and make sure that they are a good fit for the student.",
+        en: "No, we do not guarantee admission to the schools applied for. We do NOT recommend applying to low-tier schools that accept everyone for a fee under any circumstances. It is crucial for us to diligently evaluate every school the students apply for and make sure that they are a good fit for the student.",
         tr: "Hayır, başvurulan okullara kesin kabul garantisi vermiyoruz, veren kişi ve kuruluşlardan da uzak durmanızı tavsiye ediyoruz. Herkesi ücret karşılığında kabul eden düşük seviyeli okulları kesinlikle önermiyoruz. Öğrencilerin başvurdukları her okulu titizlikle değerlendirmek ve öğrencilerimiz için uygun olup olmadığından emin olmak en temel prensiplerimizdendir.",
       },
     },
@@ -47,7 +47,7 @@ export default function FAQ() {
         tr: "Niyet mektubumu başkasına veya ChatGPT gibi bir uygulamaya yazdırmak kabul şansımı arttırmaz mı?",
       },
       answer: {
-        en: "The essays, especially your statement of purpose, is the most important part of your application. It is also the only part of your application where you can express yourself and your motivations. If you have someone else write it for you, it will be obvious to the admissions committee that it is not your work.In addition, many admissions committe now use ai tools to detect if a text/essay was written by a large language model like ChatGPT. This will most likely result in your application being rejected right away.",
+        en: "The essays, especially your statement of purpose, are the most important part of your application. They are also the only part of your application where you can express yourself and your motivations. If you have someone else write it for you, it will be obvious to the admissions committee that it is not your original work. In addition, many admissions committe now use AI tools to detect if a text/essay was written by a large language model like ChatGPT. This will most likely result in your application being rejected right away.",
         tr: "Niyet mektubunuz başta olmak üzere, başvurunuzda kaleme alacağınız yazılar, başvurunuzun en önemli parçasıdır. Aynı zamanda kendinizi ve motivasyonunuzu ifade edebileceğiniz tek kısımdır. Başkasına veya ChatGPT gibi dil modellerine yazdırdığınızda, kabul komitesini etkilemek daha da zor olacaktır. Ayrıca, birçok kabul komitesi artık ChatGPT gibi büyük dil modellerinin yazdığı bir metni/niyet mektubunu tespit etmek için yapay zeka araçları kullanmaktadır. Bu durumda başvurunuzun reddedilmesi çok olasıdır.",
       },
     },
@@ -87,7 +87,7 @@ export default function FAQ() {
         tr: "Daha önce hiç yurt dışına çıkmadım. Yabancı bir ülkede yaşayıp öğrencim görebileceğimden emin değilim. Bana bu konuda yardımcı olabilir misiniz?",
       },
       answer: {
-        en: "We are ready to answer all your questions from academic life in the US to daily life.",
+        en: "We are ready to answer all your questions from academic life in the US to daily life",
         tr: "ABD'deki akademik hayattan günlük yaşama kadar tüm sorularınızı cevaplamaya hazırız.",
       },
     },
@@ -137,8 +137,8 @@ export default function FAQ() {
         tr: "ABD'deki üniversiteler ucretsiz mi?",
       },
       answer: {
-        en: "No, universities in the US are not free. However, there are many scholarships and financial aid opportunities available for international students.",
-        tr: "Hayır, ABD'deki üniversiteler ücretsiz değildir. Ancak, uluslararası öğrenciler için birçok burs ve mali yardım imkanı bulunmaktadır.",
+        en: "Unforunately, the universities in the US are not free. However, there are many scholarships and financial aid opportunities available for international students.",
+        tr: "Maalesef, ABD'deki üniversiteler ücretsiz değildir. Ancak, uluslararası öğrenciler için birçok burs ve mali yardım imkanı bulunmaktadır.",
       },
     },
     {
@@ -147,7 +147,7 @@ export default function FAQ() {
         tr: "ABD'deki uluslararası öğrenciler için tam burs imkanı var mı?",
       },
       answer: {
-        en: "For Master's programs, it is very difficult to get a full-ride scholarship. However, getting a full-ride scholarship for PhD programs is much more likely.That being said, there are some external scholarship programs that cover all your educational expenses such as the Fulbright Scholarship.",
+        en: "For Master's programs, full-ride scholarships are very limited. However, getting a full-ride scholarship for PhD programs is much more likely. That being said, there are some external scholarship programs that cover all your educational expenses such as the Fulbright Scholarship.",
         tr: "Yüksek lisans programları için tam burs imkanları çok kısıtlıdır. Ancak, doktora programları için tam burs almak çok daha olasıdır. Bununla birlikte, Fulbright Bursu gibi tüm eğitim masraflarınızı karşılayan bazı harici burs programları bulunmaktadır.",
       },
     },
