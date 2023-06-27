@@ -222,9 +222,8 @@ export default function HomeClient() {
               infrastructure to provide direct service both abroad and at home
               by organizing in different states.
               <br /> <br /> Its strong academic staff and working model,
-              consisting of people who have gone through the admission processes
-              of universities in the USA and experienced the process personally,
-              make Helios Admissions superior to many institutions in the sector
+              consisting of people who have gone through the admission process
+              of universities in the USA make Helios Admissions superior to many institutions in the sector
               and ensure that the service quality is high.
             </p>
           ) : (
@@ -242,7 +241,7 @@ export default function HomeClient() {
               dogru tercihler yaparak ve basvuru süreçlerini doğru yöneterek
               değişik programlarla yurtdışında eğitim, kariyer ve kültürel
               değişim programlarına başarıyla katılmalarını sağlamıştır.Helios
-              Admissiıns, Amerika’da çok güçlü ve çeşitli bağlara sahip
+              Admissions, Amerika’da çok güçlü ve çeşitli bağlara sahip
               olmasının yanı sıra farkli eyaletlerde örgütlenerek hem yurt
               dışında hem de yurt içinde doğrudan hizmet sağlayabilecek
               altyapıya sahip olmuştur. <br /> <br /> Amerika’daki
