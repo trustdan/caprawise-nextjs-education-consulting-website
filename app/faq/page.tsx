@@ -27,8 +27,8 @@ export default function FAQ() {
         tr: "Başvurulan okullara kesin kabul garantisi veriyor musunuz?",
       },
       answer: {
-        en: "No, we do not guarantee admission to the schools applied for. We do not recommend applying to low-tier schools that accept everyone for a fee under any circumstances. It is crucial for us to diligently evaluate every school the students apply for and make sure that they are a good fit for our students.",
-        tr: "Hayır, başvurulan okullara kesin kabul garantisi vermiyoruz, veren kişi ve kuruluşlardan da uzak durmanızı tavsiye ediyoruz. Herkesi ücret karşılığında kabul eden düşük seviyeli okulları kesinlikle önermiyoruz. Öğrencilerin başvurdukları her okulu titizlikle değerlendirmek ve öğrencilerimiz için uygun olup olmadığından emin olmak en temel prensiplerimizdendir.",
+        en: "While we are very confident in our services and the quality of our work, we cannot guarantee admission to any school due to the various factors that make up the application process.",
+        tr: "Danışmanlığımızdan ve hizmet kalitemizin kalitemizden son derece emin olsak da, herhangi bir okula kesin kabul garantisi vermemiz başvuru sürecünü oluşturan çeşitli faktörler gereği mümkün değildir.",
       },
     },
     {
@@ -37,8 +37,8 @@ export default function FAQ() {
         tr: "Başvuru için gereken niyet mektubu ve benzeri yazıları siz yazabilir misiniz?",
       },
       answer: {
-        en: "No, it is against our principles to write essays for students. However, we will provide you with the necessary guidance and review it for you as many times as you need to make sure that it is perfect for your application.",
-        tr: "Hayır, öğrenciler adına niyet mektubu yazı yazmak prensip olarak tamamen karşı olduğumuz bir konudur. Ancak, niyet mektubunuz dahil olmak üzere, başvuru için gerekli olan tüm metinleri yazarken size gerekli yönlendirmeyi fazlasıyla yapacak ve yazılarınızı başvurunuz için uygun olup olmadığından emin olana kadar tekrar tekrar gözden geçireceğiz.",
+        en: "It is against our principles to write essays for students. However, we will provide you with the necessary guidance and review it for you as many times to make sure that it is perfect for your application.",
+        tr: "Öğrenciler adına niyet mektubu vb metinleri yazmak prensip olarak tamamen karşı olduğumuz bir konudur. Ancak, niyet mektubunuz dahil olmak üzere, başvuru için gerekli olan tüm metinleri yazarken size gerekli yönlendirmeyi fazlasıyla yapacak ve yazılarınızı başvurunuz için uygun olduğuna emin olana kadar gözden geçireceğiz.",
       },
     },
     {
@@ -47,7 +47,7 @@ export default function FAQ() {
         tr: "Niyet mektubumu başkasına veya ChatGPT gibi bir uygulamaya yazdırmak kabul şansımı arttırmaz mı?",
       },
       answer: {
-        en: "The essays, especially your statement of purpose, are the most important part of your application. They are also the only part of your application where you can express yourself and your motivations. If you have someone else write it for you, it will be obvious to the admissions committee that it is not your original work. In addition, many admissions committe now use AI tools to detect if a text/essay was written by a large language model like ChatGPT. This will most likely result in your application being rejected right away.",
+        en: "The essays, especially your statement of purpose, are the most important part of your application. They are also the only part of your application where you can express yourself and your motivations. If you have someone else write it for you, it is likely that your statement of purpose will not be personalized and impactful enough. In addition, many admissions committe now use AI tools to detect if a text/essay was written by a large language model like ChatGPT. This will most likely result in your application being rejected.",
         tr: "Niyet mektubunuz başta olmak üzere, başvurunuzda kaleme alacağınız yazılar, başvurunuzun en önemli parçasıdır. Aynı zamanda kendinizi ve motivasyonunuzu ifade edebileceğiniz tek kısımdır. Başkasına veya ChatGPT gibi dil modellerine yazdırdığınızda, kabul komitesini etkilemek daha da zor olacaktır. Ayrıca, birçok kabul komitesi artık ChatGPT gibi büyük dil modellerinin yazdığı bir metni/niyet mektubunu tespit etmek için yapay zeka araçları kullanmaktadır. Bu durumda başvurunuzun reddedilmesi çok olasıdır.",
       },
     },
@@ -57,8 +57,8 @@ export default function FAQ() {
         tr: "İngilizcemin ABD'de bir okula başvurmak için yeterli olup olmadığından emin değilim. Bana bu konuda yardımcı olabilir misiniz?",
       },
       answer: {
-        en: "Yes, absolutely we can. Our team has experienced English language teachers with a Master's Degree and PhD. We will evaluate your English level together and let you know if it is good enough for your application.",
-        tr: "Evet, kesinlikle. Ekibimizde yüksek lisans ve doktora derecesine sahip deneyimli ingilizce öğretmenleri bulunmaktadır. Başvurunuzdan önce ingilizcenizi birlikte değerlendirip, başvuru için yeterli olup olmadığını sizinle paylaşacağız.",
+        en: "Absolutely we can. Our team has experienced English language teachers with a Master's Degree and PhD. We will evaluate your English level together and let you know if it is good enough for your application.",
+        tr: "Kesinlikle. Ekibimizde yüksek lisans ve doktora derecesine sahip deneyimli ingilizce öğretmenleri bulunmaktadır. Başvurunuzdan önce ingilizcenizi birlikte değerlendirip, başvuru için yeterli olup olmadığını sizinle paylaşacağız.",
       },
     },
     {
@@ -113,7 +113,7 @@ export default function FAQ() {
     },
     {
       question: {
-        en: "My undergraduate GPA is below 2.5. Can I still apply to US universities?",
+        en: "My undergraduate GPA is below 2.5. Can I still apply to the universities in the US?",
         tr: "Lisans not ortalamam 2.5'ın altında. Yine de ABD üniversitelerine başvurabilir miyim?",
       },
       answer: {
