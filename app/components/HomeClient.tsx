@@ -149,7 +149,7 @@ export default function HomeClient() {
         </div>
         <h1 className="gsap-section-1 text-5xl lg:text-6xl font-semibold max-w-[600px] text-center mx-auto pt-2 opacity-0">
           {language === "en"
-            ? "Boost Your Career With a US Graduate Degree"
+            ? "Boost Your Career With a Graduate Degree from the US"
             : "ABD Diplomasıyla Kariyerinizde Fark Yaratın"}
         </h1>
         <div className="gsap-section-1 opacity-0">
