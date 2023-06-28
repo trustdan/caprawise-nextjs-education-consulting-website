@@ -28,7 +28,7 @@ export default function FAQ() {
       },
       answer: {
         en: "While we are very confident in our services and the quality of our work, we cannot guarantee admission to any school due to the various factors that make up the application process.",
-        tr: "Danışmanlığımızdan ve hizmet kalitemizin kalitemizden son derece emin olsak da, herhangi bir okula kesin kabul garantisi vermemiz başvuru sürecünü oluşturan çeşitli faktörler gereği mümkün değildir.",
+        tr: "Danışmanlığımızdan ve hizmet kalitemizden son derece emin olsak da, herhangi bir okula kesin kabul garantisi vermemiz başvuru sürecinin yapısı gereği mümkün değildir.",
       },
     },
     {
@@ -38,7 +38,7 @@ export default function FAQ() {
       },
       answer: {
         en: "It is against our principles to write essays for students. However, we will provide you with the necessary guidance and review it for you as many times to make sure that it is perfect for your application.",
-        tr: "Öğrenciler adına niyet mektubu vb metinleri yazmak prensip olarak tamamen karşı olduğumuz bir konudur. Ancak, niyet mektubunuz dahil olmak üzere, başvuru için gerekli olan tüm metinleri yazarken size gerekli yönlendirmeyi fazlasıyla yapacak ve yazılarınızı başvurunuz için uygun olduğuna emin olana kadar gözden geçireceğiz.",
+        tr: "Öğrenciler adına niyet mektubu vb metinleri yazmak prensip olarak tamamen karşı olduğumuz bir konudur. Ancak, niyet mektubunuz dahil olmak üzere, başvuru için gerekli olan tüm metinleri yazarken size gerekli yönlendirmeyi fazlasıyla yapacak ve yeterli olduklarına emin olana kadar gözden geçireceğiz.",
       },
     },
     {
@@ -48,7 +48,7 @@ export default function FAQ() {
       },
       answer: {
         en: "The essays, especially your statement of purpose, are the most important part of your application. They are also the only part of your application where you can express yourself and your motivations. If you have someone else write it for you, it is likely that your statement of purpose will not be personalized and impactful enough. In addition, many admissions committe now use AI tools to detect if a text/essay was written by a large language model like ChatGPT. This will most likely result in your application being rejected.",
-        tr: "Niyet mektubunuz başta olmak üzere, başvurunuzda kaleme alacağınız yazılar, başvurunuzun en önemli parçasıdır. Aynı zamanda kendinizi ve motivasyonunuzu ifade edebileceğiniz tek kısımdır. Başkasına veya ChatGPT gibi dil modellerine yazdırdığınızda, kabul komitesini etkilemek daha da zor olacaktır. Ayrıca, birçok kabul komitesi artık ChatGPT gibi büyük dil modellerinin yazdığı bir metni/niyet mektubunu tespit etmek için yapay zeka araçları kullanmaktadır. Bu durumda başvurunuzun reddedilmesi çok olasıdır.",
+        tr: "Niyet mektubunuz başta olmak üzere, başvurunuzda kaleme alacağınız yazılar, başvurunuzun en önemli parçasıdır. Aynı zamanda kendinizi ve motivasyonunuzu ifade edebileceğiniz tek kısımdır. Başkasına veya ChatGPT gibi dil modellerine yazdırdığınızda, kabul komitesini etkilemek daha da zor olacaktır. Ayrıca, birçok kabul komitesi artık ChatGPT gibi büyük dil modellerinin yazdığı bir metni/niyet mektubunu tespit etmek için yapay zeka araçlarını kullanmaktadır. Bu durumda başvurunuzun reddedilmesi çok olasıdır.",
       },
     },
     {
@@ -78,7 +78,7 @@ export default function FAQ() {
       },
       answer: {
         en: "Great! The next step is to fill out our application form on our website. We will get back to you as soon as possible and schedule an online pre-assessment session with you.",
-        tr: "Harika! Bir sonraki adım web sitemizdeki başvuru formunu doldurmanız olacaktır. Formunuzu aldıktan sonra, en kısa sürede size geri dönüş sağlayıp, bir online ön değerlendirme görüşmesi planlayacağız.",
+        tr: "Harika! Bir sonraki adım web sitemizdeki başvuru formunu doldurmanız olacaktır. Formunuzu aldıktan sonra, en kısa sürede size geri dönüş sağlayıp, Google Meet üzerinden bir ön değerlendirme görüşmesi planlayacağız.",
       },
     },
     {
@@ -87,8 +87,8 @@ export default function FAQ() {
         tr: "Daha önce hiç yurt dışına çıkmadım. Yabancı bir ülkede yaşayıp öğrencim görebileceğimden emin değilim. Bana bu konuda yardımcı olabilir misiniz?",
       },
       answer: {
-        en: "We are ready to answer all your questions from academic life in the US to daily life",
-        tr: "ABD'deki akademik hayattan günlük yaşama kadar tüm sorularınızı cevaplamaya hazırız.",
+        en: "As a team that has resided in the US both as a student and a professional, we are ready to answer all your questions from academic life to daily life in the US.",
+        tr: "ABD'de ikamet eden ve lisanüstü eğitim süreçlerinden geçen bir ekip olarak, ABD'deki akademik hayattan günlük yaşama kadar tüm sorularınızı cevaplamaya hazırız.",
       },
     },
     {
@@ -127,8 +127,8 @@ export default function FAQ() {
         tr: "Lisans bölümüm, yüksek lisans yapmak istediğim bölümle alakalı değil. Yine de başvurabilir miyim?",
       },
       answer: {
-        en: "Absolutely! In this case, you will need to explain your motivation in detail in your statement of purpose and take some prerequisite courses beforehand. If you need a concrete example, one of our founding members, Oğuzhan Yangöz, completed his undergraduate degree in English Language Teaching and his graduate degree in Computer Science at George Washington University.",
-        tr: "Kesinlikle! Bu durumda, niyet mektubunuzda motivasyonunuzu detaylıca açıklamanız ve bazı önkoşul derslerini önceden almanız gerekecektir. Somut bir kanıt sunmak gerekirse, kurucu üyelerimizden biri olan Oğuzhan Yangöz de lisans eğitimini İngilizce Öğretmenliği alanında tamamlamış ve yüksek lisansını George Washington Üniversitesi Bilgisayar Bilimleri alanında yapmıştır.",
+        en: "Absolutely! In this case, you will need to explain your motivation in detail in your statement of purpose and take some prerequisite courses beforehand. ",
+        tr: "Kesinlikle! Bu durumda, niyet mektubunuzda motivasyonunuzu detaylıca açıklamanız ve bazı önkoşul derslerini önceden almanız gerekecektir. ",
       },
     },
     {
@@ -137,7 +137,7 @@ export default function FAQ() {
         tr: "ABD'deki üniversiteler ucretsiz mi?",
       },
       answer: {
-        en: "Unforunately, the universities in the US are not free. However, there are many scholarships and financial aid opportunities available for international students.",
+        en: "Unfortunately, the majority of the universities in the US are not free. However, there are many scholarships and financial aid opportunities available for international students.",
         tr: "Maalesef, ABD'deki üniversiteler ücretsiz değildir. Ancak, uluslararası öğrenciler için birçok burs ve mali yardım imkanı bulunmaktadır.",
       },
     },
@@ -148,7 +148,7 @@ export default function FAQ() {
       },
       answer: {
         en: "For Master's programs, full-ride scholarships are very limited. However, getting a full-ride scholarship for PhD programs is much more likely. That being said, there are some external scholarship programs that cover all your educational expenses such as the Fulbright Scholarship.",
-        tr: "Yüksek lisans programları için tam burs imkanları çok kısıtlıdır. Ancak, doktora programları için tam burs almak çok daha olasıdır. Bununla birlikte, Fulbright Bursu gibi tüm eğitim masraflarınızı karşılayan bazı harici burs programları bulunmaktadır.",
+        tr: "Yüksek lisans programları için tam burs imkanları çok kısıtlıdır. Ancak, doktora programları için tam burs almak çok daha olasıdır. Bununla birlikte, Fulbright bursu gibi tüm eğitim masraflarınızı karşılayan bazı harici burs programları bulunmaktadır.",
       },
     },
     {
@@ -158,7 +158,7 @@ export default function FAQ() {
       },
       answer: {
         en: "For undergraduate students, we only provide short-term language school programs. We do not provide services for undergraduate admissions.",
-        tr: "Lisans öğrencileri için sadece kısa süreli dil okulu programları sağlıyoruz. Lisans programı başvuruları için hizmet vermiyoruz.",
+        tr: "Lisans öğrencileri için sadece kısa süreli dil okulu programları sunuyoruz. Lisans programı başvuruları için hizmet vermiyoruz.",
       },
     },
     {
@@ -169,6 +169,36 @@ export default function FAQ() {
       answer: {
         en: "No, there are no age restrictions for graduate programs. Students of all ages are welcome to apply.",
         tr: "Hayır, yüksek lisans ve doktora programları için yaş sınırı yoktur. Her yaş grubundan öğrenciler başvurabilir.",
+      },
+    },
+    {
+      question: {
+        en: "Will I be able to work while I am studying in the US?",
+        tr: "ABD'de okurken çalışabilir miyim?",
+      },
+      answer: {
+        en: "You can only work on-campus for a maximum of 20 hours per week. However, you can work off-campus after your first year of study by proving that you are facing financial difficulties (Fluctuations in USD/TRY parity is a valid reason for requesting off-campus work authorization). In addition, you can do internship through Curricular Practical Training (CPT) and work full time/part time through Optional Practical Training (OPT) during and after your studies. Please contact us for more information.",
+        tr: "Haftada maksimum 20 saat olmak üzere sadece okul bünyesinde (öğretim asistanı, kütüphane görevlisi vb) çalışabilirsiniz. Ancak, ilk yılınızı tamamladıktan sonra, mali zorluklarla karşı karşıya olduğunuzu kanıtlayarak (USD/TRY paritesindeki dalgalanmalar, kampüs dışında çalışma izni talep etmek için USCIS tarafından geçerli bir neden olarak kabul edilir) kampüs dışında çalışabilirsiniz. Ayrıca, eğitiminiz sırasında ve sonrasında Stajyerlik (CPT) ve İsteğe Bağlı Pratik Eğitim (OPT) programları aracılığıyla staj yapabilir veya yarı zamanlı/tam zamanlı olarak çalışabilirsiniz. Bu konuda daha detaylı bilgi için lütfen bizimle iletişime geçin.",
+      },
+    },
+    {
+      question: {
+        en: "Do you provide visa consulting services for students?",
+        tr: "Öğrenciler için vize danışmanlığı hizmeti veriyor musunuz?",
+      },
+      answer: {
+        en: "Yes, we provide visa consulting services for students. We provide consulting services on preparing the required documents, filling out the DS-160 form, creating the SEVIS record, scheduling the visa interview, and practicing for the interview.",
+        tr: "Evet, öğrenciler için vize danışmanlığı hizmeti veriyoruz. Gerekli belgeleri hazırlama, DS-160 formunu doldurma, SEVIS kaydı oluşturma, vize görüşmesi için randevu alma ve görüşmeye hazırlanma konularında danışmanlık hizmeti veriyoruz.",
+      },
+    },
+    {
+      question: {
+        en: "Some agencies claim that students can work in the US while they are studying starting from the first year. Is this true?",
+        tr: "Öğrenciler için vize danışmanlığı hizmeti veriyor musunuz?",
+      },
+      answer: {
+        en: "Yes, we provide visa consulting services for students as a part of our service packages. We provide consulting services on preparing the required documents, filling out the DS-160 form, creating the SEVIS record, scheduling the visa interview, and practicing for the interview.",
+        tr: "Evet, hizmet paketlerimizin kapsamı dahilinde öğrenciler için vize danışmanlığı hizmeti veriyoruz. Gerekli belgeleri hazırlama, DS-160 formunu doldurma, SEVIS kaydı oluşturma, vize görüşmesi için randevu alma ve görüşmeye hazırlanma konularında danışmanlık hizmeti veriyoruz.",
       },
     },
   ];
