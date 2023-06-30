@@ -28,7 +28,7 @@ export default function ServicePlan({
         {language === "en" ? name.en : name.tr}
       </h3>
       <p
-        className="font-light text-gray-500 text-base lg:text-lg dark:text-gray-400 text-center"
+        className="font-light text-gray-500 text-base lg:text-lg dark:text-gray-400 text-center lg:h-[110px] lg:mb-[-15px] xl:mb-0 xl:h-auto"
         ref={pRef}
       >
         {language === "en" ? description.en : description.tr}
