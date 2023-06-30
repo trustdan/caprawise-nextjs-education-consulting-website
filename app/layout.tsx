@@ -12,7 +12,7 @@ import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   title:
-    "Helios Admisisons - Amerika'da Yüksek lisans, Doktora ve Dil Okulu Danışmanlığı | Helios Admissions - Graduate School, PhD and Language School Consulting in the United States ",
+    "Helios Admissions - Amerika'da Yüksek lisans, Doktora ve Dil Okulu Danışmanlığı | Helios Admissions - Graduate School, PhD and Language School Consulting in the United States ",
   description:
     "ABD merkezli Helios Admissions Resmi Web Sitesi | Official website of Helios Education Consulting Company based in the United States",
 };
