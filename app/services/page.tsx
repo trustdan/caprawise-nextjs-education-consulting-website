@@ -30,10 +30,6 @@ export default function Services() {
       en: "The packages do not include extra fees, such as application fees for each school, TOEFL and GRE/GMAT examination fees",
       tr: "Paketlerimiz, her okul için gerekli olan başvuru ücreti, TOEFL ve GRE/GMAT sınav ücreti gibi ek ücretleri içermez",
     },
-    {
-      en: "We do not offer visa application support. It is the students' responsibility to make sure they have sufficient funds to document and cover educational expenses in the US",
-      tr: "Vize başvurusu desteği sunmuyoruz. Öğrencilerin, ABD'deki eğitim masraflarını belgelemek ve karşılamak için yeterli miktarda paraya sahip olmaları kendi sorumluluklarıdır",
-    },
   ];
   const SERVICE_PLANS = [
     {
@@ -43,8 +39,8 @@ export default function Services() {
       },
       price: 50,
       description: {
-        en: "Eligibility and academic background assessment",
-        tr: "Akademik geçmiş değerlendirmesi ve uygunluk belirleme",
+        en: "A 45-minute virtual meeting to discuss your academic background, English proficiency and the application process",
+        tr: "Akademik geçmişiniz, İngilizce yeterliliğiniz ve başvuru süreci hakkında 45 dakikalık online görüşme",
       },
       features: [
         {
@@ -64,6 +60,10 @@ export default function Services() {
           tr: "ABD'de eğitim almak için uygunluk belirlenmesi",
         },
         {
+          en: "Breakdown of costs and expenses",
+          tr: "Maliyet ve harcamaların ayrıntılı değerlendirilmesi",
+        },
+        {
           en: "Briefing about the US education system",
           tr: "ABD eğitim sistemi hakkında bilgilendirme",
         },
@@ -74,10 +74,10 @@ export default function Services() {
         en: "Standard Package",
         tr: "Standart Paket",
       },
-      price: 1000,
+      price: 950,
       description: {
-        en: "Standard assistance with the application process",
-        tr: "10 okula kadar başvuru sürecinin tamamında destek",
+        en: "Application support up to 10 universities, visa support, TOEFL and GRE/GMAT assistance",
+        tr: "10 üniversiteye kadar başvuru desteği, vize danışmanlığı, TOEFL ve GRE/GMAT desteği",
       },
       features: [
         {
@@ -97,6 +97,10 @@ export default function Services() {
           tr: "TOEFL/IELTS/GRE/GMAT için kaynaklar",
         },
         {
+          en: "F-1 Visa application support",
+          tr: "F-1 Vize başvurusu desteği",
+        },
+        {
           en: "Support for official communication with target schools",
           tr: "Başvurmak istenilen okullarla resmi iletişim desteği",
         },
@@ -111,10 +115,10 @@ export default function Services() {
         en: "Full Package",
         tr: "Full Paket",
       },
-      price: 2000,
+      price: 1950,
       description: {
-        en: "The highest level of assistance with the application process",
-        tr: "10 okula kadar başvuru sürecinin tamamında en üst düzeyde destek",
+        en: "Standard Package + application submission, portfolio review, and loan/scholarship opportunities",
+        tr: "Standart Paket + başvuru gönderimi, portfolyo değerlendirmesi ve kredi/burs fırsatları",
       },
       features: [
         {
@@ -130,8 +134,8 @@ export default function Services() {
           tr: "Belirtilen başvuru süresi içinde tüm başvuru belgelerinin zamanında gönderilmesinin sağlanması",
         },
         {
-          en: "Exploring extensive student loans and financial aid opportunities",
-          tr: "Uluslararasi öğrenci kredileri ve mali yardım fırsatlarının araştırılması",
+          en: "Exploring extensive no-colatteral/no-cosigner student loans and financial aid opportunities abroad",
+          tr: "Yurt dışında ipoteksiz/kefilsiz öğrenci kredileri ve burs fırsatlarına dair kapsamlı danışmanlık",
         },
       ],
     },
