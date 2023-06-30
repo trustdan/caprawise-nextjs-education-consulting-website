@@ -42,7 +42,7 @@ export default function About() {
     },
     description: {
       en: "Our team members have completed their master's and doctoral degrees and are currently residing in the United States.",
-      tr: "Ekip üyelerimiz yüksek lisans ve doktora süreçlerinden geçmiş olup, şu anda ABD'de ikamet eden kişilerden oluşmaktadır.",
+      tr: "Ekip üyelerimiz yüksek lisans ve doktora süreçlerinden geçmiş olup, şu anda ABD'de ikamet etmektedir.",
     },
   };
 
