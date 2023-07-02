@@ -50,7 +50,7 @@ export default function About() {
     <PageStyler>
       <section
         id="our-team"
-        className="h-full px-5 lg:pb-8 pb-5 min-h-[100svh-5rem]"
+        className="h-full px-5 lg:pb-8 pb-5 min-h-[calc(100svh-12rem)]"
       >
         <PageIntroduction
           title={ABOUT_PAGE_INTRODUCTION.title}
