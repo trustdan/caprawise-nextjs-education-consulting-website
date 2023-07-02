@@ -29,6 +29,7 @@ export default function Cofounder(props: CofounderProps) {
         width={250}
         height={250}
         priority={true}
+        quality={100}
       />
       <div className="flex flex-col gap-2 lg:gap-5 leading-[1.42]">
         <div className="flex flex-col text-xl text-center lg:text-left lg:mt-[-5px] ">
