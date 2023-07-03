@@ -8,7 +8,7 @@ type LogoProps = {
 
 export default function Logo(props: LogoProps) {
   return (
-    <section className="flex flex-col gap-2 items-center ">
+    <section className="flex gap-4 items-center ">
       <Image
         src="/logo.webp"
         alt="Helios Admissions Logo"
