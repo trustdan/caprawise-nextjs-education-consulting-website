@@ -16,9 +16,6 @@ interface IUseHeaderReturn {
   activeLink: string;
   setActiveLink: React.Dispatch<React.SetStateAction<string>>;
   headerRef: React.RefObject<HTMLElement>;
-  navItemsRef: React.RefObject<HTMLElement>;
-  languageRef: React.RefObject<HTMLDivElement>;
-  hamburgerRef: React.RefObject<HTMLDivElement>;
 }
 
 export function useHeader(): IUseHeaderReturn {
@@ -70,9 +67,6 @@ export function useHeader(): IUseHeaderReturn {
 
   const [activeLink, setActiveLink] = useState("");
   const headerRef = useRef<HTMLElement>(null);
-  const navItemsRef = useRef<HTMLElement>(null);
-  const languageRef = useRef<HTMLDivElement>(null);
-  const hamburgerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Set active link(necessary for accessing via url with specific pathnames; e.g. .../about)
@@ -82,33 +76,20 @@ export function useHeader(): IUseHeaderReturn {
 
     // GSAP Animations
     const headerAnimation = gsap.to(headerRef.current!, {
-      duration: 0.5,
+      duration: 0.2,
       y: 0,
       ease: "power3.out",
     });
-    const navItemsAnimation = gsap.to(navItemsRef.current!, {
-      duration: 0.5,
-      opacity: 1,
-      ease: "power3.out",
-    });
 
-    const languageAnimation = gsap.to(languageRef.current!, {
-      duration: 0.5,
-      opacity: 1,
-      ease: "power3.out",
-    });
-
-    const hamburgerAnimation = gsap.to(hamburgerRef.current!, {
-      duration: 0.5,
+    const headerAnimation2 = gsap.to(headerRef.current!, {
+      duration: 0.2,
       opacity: 1,
       ease: "power3.out",
     });
 
     const tl = gsap.timeline();
-    tl.add(headerAnimation)
-      .add(navItemsAnimation, "-=0.5")
-      .add(languageAnimation, "-=0.5")
-      .add(hamburgerAnimation, "-=0.5");
+    tl.add(headerAnimation);
+    tl.add(headerAnimation2);
   }, []);
 
   return {
@@ -117,8 +98,5 @@ export function useHeader(): IUseHeaderReturn {
     activeLink,
     setActiveLink,
     headerRef,
-    navItemsRef,
-    languageRef,
-    hamburgerRef,
   };
 }
