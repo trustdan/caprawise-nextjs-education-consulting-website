@@ -15,7 +15,7 @@ type CofounderProps = {
 };
 
 export default function Cofounder(props: CofounderProps) {
-  const language = useLanguageContext().language;
+  const { language } = useLanguageContext();
   const { cofounderRef } = useCofounder();
   return (
     <div
