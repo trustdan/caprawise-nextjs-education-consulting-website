@@ -8,7 +8,8 @@ import PrimaryButton from "./PrimaryButton";
 import Logo from "./Logo";
 
 export default function Header() {
-  const { language, NAV_BAR_ITEMS, activeLink, setActiveLink, headerRef } = useHeader();
+  const { language, NAV_BAR_ITEMS, activeLink, setActiveLink, headerRef } =
+    useHeader();
   const { data: session } = useSession();
 
   return (
@@ -53,6 +54,13 @@ export default function Header() {
                     {language === "en" ? "DASHBOARD" : "ADMİN PANELİ"}
                   </Link>
                 )}
+                {session && (
+                  <PrimaryButton
+                    label={{ en: "Log out", tr: "Çıkış Yap" }}
+                    className="text-white hidden lg:block text-xs font-bold uppercase tracking-widest h-10 rounded-lg "
+                    onClick={() => signOut()}
+                  />
+                )}
               </nav>
 
               <div role="div for gsap effect" className="order-1 lg:order-2">
@@ -60,13 +68,6 @@ export default function Header() {
               </div>
             </div>
 
-            {session && (
-              <PrimaryButton
-                label={{ en: "Log out", tr: "Çıkış Yap" }}
-                className="text-white hidden lg:block text-xs font-bold uppercase tracking-widest "
-                onClick={() => signOut()}
-              />
-            )}
             <div
               role="div for gsap effect"
               className="lg:hidden order-3 lg:order-none"
