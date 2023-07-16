@@ -28,7 +28,6 @@ export default function Cofounder(props: CofounderProps) {
         alt={props.imageAlt}
         width={250}
         height={250}
-        priority={true}
         quality={100}
       />
       <div className="flex flex-col gap-2 lg:gap-5 leading-[1.42]">
