@@ -16,8 +16,8 @@ export default function HomeClient() {
         tr: "TOEFL/GRE Danışmanlığı",
       },
       description: {
-        en: "Navigating the TOEFL or GRE can seem intimidating, but our team of distinguished English teachers, all possessing Master’s and PhD degrees, is ready to assist. We’ll offer customized advising and support to help you achieve your optimal score.",
-        tr: "TOEFL veya GRE sınavlarına hazırlanmak göz korkutucu görünebilir, ancak yüksek lisans ve doktora derecelerine sahip deneyimli İngilizce öğretmenlerimizden oluşan ekibimiz size yardımcı olmaya hazır. Başvurunuz için olmazsa olmaz olan bu sınavlarda en yüksek puanınızı elde etmenize yardımcı olmak için size özel danışmanlık ve destek sunacağız",
+        en: "Navigating the TOEFL or GRE can seem intimidating, but our team of distinguished English teachers, all possessing Master’s and PhD degrees, is ready to assist. We’ll offer customized advising and support to help you achieve your optimal score. Our experienced instructors will work closely with you to identify your specific needs and design a comprehensive study plan that maximizes your potential for success.",
+        tr: "TOEFL veya GRE sınavlarına hazırlanmak göz korkutucu bir süreç, ancak yüksek lisans ve doktora derecelerine sahip deneyimli İngilizce öğretmenlerimizden oluşan ekibimiz ile size yardımcı olmak için hazırız. Başvurunuz için olmazsa olmaz olan bu sınavlarda en yüksek puanınızı elde etmenize yardımcı olmak için size özel danışmanlık ve destek sunacağız. ",
       },
     },
     {
@@ -26,8 +26,8 @@ export default function HomeClient() {
         tr: "Niyet Mektubu Desteği",
       },
       description: {
-        en: "Our team will provide you with all the assistance you need to craft a compelling narrative that showcases your unique strengths and experiences in your statement of purpose.",
-        tr: "Ekibimiz, niyet mektubunuzda benzersiz güçlü yönlerinizi ve deneyimlerinizi sergileyen etkileyici bir anlatım oluşturmanız için ihtiyacınız olan tüm yardımı size sağlayacaktır",
+        en: "Our team will provide you with all the assistance you need to craft a compelling narrative that showcases your unique strengths and experiences in your statement of purpose. We understand the importance of a well-written and impactful SOP in the admissions process, and we are dedicated to helping you create a personalized and persuasive document that sets you apart from other applicants.",
+        tr: "Ekibimiz, niyet mektubunuzda benzersiz güçlü yönlerinizi ve deneyimlerinizi sergileyen etkileyici bir anlatım oluşturmanız için ihtiyacınız olan tüm yardımı size sağlayacaktır. Kabul sürecinde iyi yazılmış ve etkileyici bir SOP'un önemini biliyoruz ve sizin diğer başvuru sahiplerinden farkınızı ortaya koyan kişisel ve ikna edici bir belge oluşturmanıza yardımcı olmak için özveriyle çalışacağız.",
       },
     },
     {
@@ -52,8 +52,8 @@ export default function HomeClient() {
     },
     {
       title: {
-        en: "Equity, Diversity and Inclusion Statement Feedback",
-        tr: "Toplumsal Eşitlik ve Kapsayıcılık Mektubu Desteği",
+        en: "Equity, Diversity and Inclusion Statement",
+        tr: "Toplumsal Eşitlik ve Kapsayıcılık Mektubu",
       },
       description: {
         en: "Embracing diversity is crucial in the US, and it can significantly impact your admissions outcome. Our skilled team will assist you in creating a compelling diversity statement that showcases your distinctive experiences and viewpoints, and underscores your dedication to fostering diversity and inclusion",
