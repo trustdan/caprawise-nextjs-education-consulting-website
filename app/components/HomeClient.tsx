@@ -26,8 +26,8 @@ export default function HomeClient() {
         tr: "Niyet Mektubu Desteği",
       },
       description: {
-        en: "Our team will review your statement of purpose as many times as needed and provide detailed feedback to help you craft a compelling narrative that showcases your unique strengths and experiences.",
-        tr: "Ekibimiz niyet mektubunuzu belirli standartlara erişene kadar defalarca gözden geçirecek ve güçlü yönlerinizi ve deneyimlerinizi sergileyen ikna edici bir anlatı oluşturmanıza yardımcı olacak ayrıntılı geri bildirimler sunacaktır.",
+        en: "Our team will provide you with all the assistance you need to craft a compelling narrative that showcases your unique strengths and experiences in your statement of purpose.",
+        tr: "Ekibimiz, niyet mektubunuzda benzersiz güçlü yönlerinizi ve deneyimlerinizi sergileyen etkileyici bir anlatım oluşturmanız için ihtiyacınız olan tüm yardımı size sağlayacaktır",
       },
     },
     {
@@ -67,7 +67,17 @@ export default function HomeClient() {
       },
       description: {
         en: "Getting into an Ivy League school is a dream for many students, but very few are accepted. Our team will help you craft a compelling application that showcases your unique strengths and experiences, helping you to stand out from the competition and increase your chances of being in the top 5% of the applicants.",
-        tr: " Ivy League okullarına girmek birçok öğrencinin hayalidir, ancak çok az öğrenci kabul edilir. Ekibimiz, sadece akademik değil, sosyal ve kültürel yönlerinizi de göz önünde bulundurarak, size özel güçlü yönlerinizi ve deneyimlerinizi sergileyen ikna edici bir başvuru oluşturmanıza yardımcı olarak %5'lik dilime girme şansınızı arttıracaktır.",
+        tr: "Ivy League okullarına girmek birçok öğrencinin hayalidir, ancak çok az öğrenci kabul edilir. Ekibimiz, sadece akademik değil, sosyal ve kültürel yönlerinizi de göz önünde bulundurarak, size özel güçlü yönlerinizi ve deneyimlerinizi sergileyen ikna edici bir başvuru oluşturmanıza yardımcı olarak %5'lik dilime girme şansınızı arttıracaktır.",
+      },
+    },
+    {
+      title: {
+        en: "Application to Law Schools and Bar Exams",
+        tr: "Hukuk Fakültelerine ve Baro Sınavlarına Başvuru",
+      },
+      description: {
+        en: "We provide support to individuals who have completed their law education in Turkey and aim to enhance their careers through prestigious American law schools' master's, doctoral, and certificate programs, as well as those who wish to practice law in the USA by registering with globally recognized bars such as the New York and California State Bar Associations. We also assist aspiring lawyers who wish to pursue their legal education in the USA. Our team handles all aspects of the application process, including correspondence between the candidate and the Law School Admission Council (LSAC), and preparation for bar exams. Having personally gone through the same procedures, our consultants guide candidates through the entire process.",
+        tr: "Türkiye’de hukuk eğitimini tamamlamış ve kariyerine saygın Amerikan hukuk fakültelerinin yüksek lisans, doktora ve sertifika programları ile güç katmak isteyen hukukçulara, mesleğini New York ve California Baroları gibi dünya çapında tanınırlığa sahip barolara kaydolarak ABD’de icra etmek isteyen avukatlara ve hukuk eğitimini ABD’de almak isteyen tüm hukukçu adaylarına uzman ekibimiz ile başvuru süreçlerinde destek sağlıyoruz. Adayımız ve LSAC (the Law School Admission Council) arasındaki yazışmaların yapılmasından, baro sınavlarına hazırlık sürecine kadar, aynı prosedürlerden bizzat geçmiş danışman kadromuz ile tüm süreci beraber yürütüyoruz.",
       },
     },
   ];
@@ -169,12 +179,12 @@ export default function HomeClient() {
       </section>
       <section
         id="home-section-2"
-        className=" grid place-content-center gap-10 px-5 py-16 lg:py-0 bg-LIGHT_SECONDARY_BG_COLOR dark:bg-DARK_SECONDARY_BG_COLOR min-h-[calc(100svh-4rem)]"
+        className=" grid place-content-center gap-10 px-5 py-16 bg-LIGHT_SECONDARY_BG_COLOR dark:bg-DARK_SECONDARY_BG_COLOR"
       >
         <h1 className=" home-section-2 md:text-5xl text-3xl font-extrabold text-center">
           {language === "en" ? "What Do We Offer?" : "Neler Sunuyoruz?"}
         </h1>
-        <div className="home-section-2 grid gap-10 md:grid-cols-2 max-w-[1440px]">
+        <div className="home-section-2 grid gap-10 md:grid-cols-2 max-w-[1440px] md:[&>*:last-child]:col-span-2">
           {FEATURES_DATA.map((feature, index) => (
             <FeatureCard
               key={index}
@@ -184,10 +194,7 @@ export default function HomeClient() {
           ))}
         </div>
       </section>
-      <section
-        id="home-section-3"
-        className="grid place-items-center my-16 min-h-[calc(100svh-4rem)]"
-      >
+      <section id="home-section-3" className="grid place-items-center py-16">
         <div className="mx-5 flex flex-col gap-8 justify-center items-center max-w-2xl">
           <h1 className="md:text-5xl text-3xl font-extrabold text-center px-5">
             {language === "en"
@@ -223,8 +230,9 @@ export default function HomeClient() {
               by organizing in different states.
               <br /> <br /> Its strong academic staff and working model,
               consisting of people who have gone through the admission process
-              of universities in the USA make Helios Admissions superior to many institutions in the sector
-              and ensure that the service quality is high.
+              of universities in the USA make Helios Admissions superior to many
+              institutions in the sector and ensure that the service quality is
+              high.
             </p>
           ) : (
             <p className="text-justify min-h-full flex-1  text-gray-500 dark:text-gray-400">
