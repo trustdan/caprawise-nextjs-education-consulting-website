@@ -33,26 +33,6 @@ export default function FAQ() {
     },
     {
       question: {
-        en: "Can you write my essays for me?",
-        tr: "Başvuru için gereken niyet mektubu ve benzeri yazıları siz yazabilir misiniz?",
-      },
-      answer: {
-        en: "It is against our principles to write essays for students. However, we will provide you with the necessary guidance and review it for you as many times to make sure that it is perfect for your application.",
-        tr: "Öğrenciler adına niyet mektubu vb metinleri yazmak prensip olarak tamamen karşı olduğumuz bir konudur. Ancak, niyet mektubunuz dahil olmak üzere, başvuru için gerekli olan tüm metinleri yazarken size gerekli yönlendirmeyi fazlasıyla yapacak ve yeterli olduklarına emin olana kadar gözden geçireceğiz.",
-      },
-    },
-    {
-      question: {
-        en: "Would it not increase my chances of getting accepted if I have someone else or an application like ChatGPT write my essays for me?",
-        tr: "Niyet mektubumu başkasına veya ChatGPT gibi bir uygulamaya yazdırmak kabul şansımı arttırmaz mı?",
-      },
-      answer: {
-        en: "The essays, especially your statement of purpose, are the most important part of your application. They are also the only part of your application where you can express yourself and your motivations. If you have someone else write it for you, it is likely that your statement of purpose will not be personalized and impactful enough. In addition, many admissions committe now use AI tools to detect if a text/essay was written by a large language model like ChatGPT. This will most likely result in your application being rejected.",
-        tr: "Niyet mektubunuz başta olmak üzere, başvurunuzda kaleme alacağınız yazılar, başvurunuzun en önemli parçasıdır. Aynı zamanda kendinizi ve motivasyonunuzu ifade edebileceğiniz tek kısımdır. Başkasına veya ChatGPT gibi dil modellerine yazdırdığınızda, kabul komitesini etkilemek daha da zor olacaktır. Ayrıca, birçok kabul komitesi artık ChatGPT gibi büyük dil modellerinin yazdığı bir metni/niyet mektubunu tespit etmek için yapay zeka araçlarını kullanmaktadır. Bu durumda başvurunuzun reddedilmesi çok olasıdır.",
-      },
-    },
-    {
-      question: {
         en: "I am not sure if my English is good enough to apply to a school in the US. Can you help me with that?",
         tr: "İngilizcemin ABD'de bir okula başvurmak için yeterli olup olmadığından emin değilim. Bana bu konuda yardımcı olabilir misiniz?",
       },
