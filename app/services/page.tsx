@@ -23,10 +23,6 @@ export default function Services() {
 
   const footnotes = [
     {
-      en: "None of our services include writing a statement of purpose on behalf of the students",
-      tr: "Hizmetlerimizin hiçbiri öğrenciler adına niyet mektubu yazmayı içermez",
-    },
-    {
       en: "The packages do not include extra fees, such as application fees for each school, TOEFL and GRE/GMAT examination fees",
       tr: "Paketlerimiz, her okul için gerekli olan başvuru ücreti, TOEFL ve GRE/GMAT sınav ücreti gibi ek ücretleri içermez",
     },
