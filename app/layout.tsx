@@ -9,6 +9,7 @@ import QueryProvider from "./contexts/QueryProvider";
 import AuthSessionProvider from "./contexts/AuthSessionProvider";
 import ThemeChanger from "./components/ThemeChanger";
 import { Analytics } from "@vercel/analytics/react";
+import CalendlyWidget from "./components/CalendlyWidget";
 
 export const metadata = {
   title:
@@ -65,6 +66,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
               <LanguageProvider>
                 <Header />
                 <ThemeChanger />
+                <CalendlyWidget />
                 {children}
                 <Analytics />
                 <Footer />
