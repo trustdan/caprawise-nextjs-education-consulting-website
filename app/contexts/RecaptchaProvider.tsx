@@ -14,11 +14,11 @@ export default function RecaptchaProvider({
   const language = useLanguageContext().language;
 
   return (
-    <GoogleReCaptchaProvider
-      reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_PUBLIC as string}
-      language={language}
-    >
-      {children}
-    </GoogleReCaptchaProvider>
+      <GoogleReCaptchaProvider
+        reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_PUBLIC as string}
+        language={language}
+      >
+        {children}
+      </GoogleReCaptchaProvider>
   );
 }
