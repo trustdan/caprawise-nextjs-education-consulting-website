@@ -21,7 +21,7 @@ export default function CalendlyWidget() {
       >
         {language === "en" ? "Book A Call" : "Randevu Al"}
       </Link>
-      <button className="lg:hidden" onClick={handleCalendlyClick}>
+      <button className="lg:hidden dark:invert" onClick={handleCalendlyClick}>
         <BsFillCalendarCheckFill size={27} />
       </button>
     </div>
