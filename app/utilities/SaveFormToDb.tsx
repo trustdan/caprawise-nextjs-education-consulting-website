@@ -1,5 +1,6 @@
-import { prisma } from "@/app/lib/prisma";
 import { ApplicationFormData, ContactFormData } from "../lib/zod";
+import { ApplicationFormEntity } from "../entities/AplicationFormDDB";
+import { ContactFormEntity } from "../entities/ContactFormDDB";
 
 export async function saveFormToDb(
   formData: ApplicationFormData | ContactFormData,
@@ -26,9 +27,7 @@ export async function saveFormToDb(
         toeflIelts: formData.toeflIelts,
         gre: formData.gre,
       };
-      const form = await prisma.applicationForm.create({
-        data,
-      });
+      const form = await ApplicationFormEntity.put(data);
       console.log(form);
     } else if (formType === "contact" && "question" in formData) {
       data = {
@@ -37,9 +36,7 @@ export async function saveFormToDb(
         phone: formData.phone,
         question: formData.question,
       };
-      const form = await prisma.contactForm.create({
-        data,
-      });
+      const form = await ContactFormEntity.put(data);
       console.log(form);
     }
   } catch (error) {

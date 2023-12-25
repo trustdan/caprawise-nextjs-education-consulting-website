@@ -7,12 +7,12 @@ import {
   TableCell,
   Text,
 } from "@tremor/react";
-import { ContactForm } from "@prisma/client";
+import { ContactFormDDB } from "../entities/ContactFormDDB";
 
 export default function AdminTable({
   data,
 }: {
-  data: ContactForm[] | undefined;
+  data: ContactFormDDB[] | undefined;
 }) {
   return (
     <Table className="overflow-x-auto">
@@ -27,7 +27,7 @@ export default function AdminTable({
       </TableHead>
       <TableBody>
         {data?.map((data, index) => (
-          <TableRow key={data.id}>
+          <TableRow key={data.PK}>
             <TableCell className="w-[10px] border">
               <Text>{index + 1}</Text>
             </TableCell>

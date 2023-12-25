@@ -1,7 +1,7 @@
-import prisma from "@/app/lib/prisma";
 import { NextRequest, NextResponse } from "next/server";
 import bcrypt from "bcrypt";
 import { verifyJwt } from "@/app/lib/jwt";
+import { UserEntity } from "@/app/entities/UserDDB";
 
 export async function POST(request: NextRequest) {
   if (request.method === "POST") {
@@ -22,13 +22,34 @@ export async function POST(request: NextRequest) {
       }
 
       const body = await request.json();
-      const user = await prisma.user.create({
-        data: {
-          username: body.username,
-          password: await bcrypt.hash(body.password, 10),
-        },
-      });
+      const user = {
+        username: body.username as string,
+        password: await bcrypt.hash(body.password, 10),
+      }
 
+      const PK = `USER#${user.username}`;
+      const SK = 'METADATA';
+      const isUserExist =  (await UserEntity.get({ PK, SK })).Item
+
+      if (isUserExist !== null) {
+        return new NextResponse(
+          JSON.stringify({
+            error: "User already exists",
+          }),
+          {
+            status: 400,
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+      }
+
+      await UserEntity.put({
+        username: user.username,
+        password: user.password,
+      });
+    
       const { password, ...userWithoutPass } = user;
       return new NextResponse(JSON.stringify(userWithoutPass), {
         status: 200,

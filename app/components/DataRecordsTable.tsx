@@ -1,4 +1,5 @@
-import { ApplicationForm, ContactForm } from "@prisma/client";
+import { ApplicationFormDDB } from "../entities/AplicationFormDDB";
+import {ContactFormDDB} from "../entities/ContactFormDDB";
 import {
   TableRow,
   TableHeaderCell,
@@ -10,8 +11,8 @@ import {
 } from "@tremor/react";
 
 type DataProps = {
-  applicationForms?: ApplicationForm[];
-  contactForms?: ContactForm[];
+  applicationForms?: ApplicationFormDDB[];
+  contactForms?: ContactFormDDB[];
 };
 
 const tableHeaders = {
@@ -33,7 +34,7 @@ const tableHeaders = {
     { label: "English Proficiency", accessor: "englishProficiency" },
     { label: "TOEFL/IELTS", accessor: "toeflIelts" },
     { label: "Familiar with GRE?", accessor: "gre" },
-    { label: "Submitted at?", accessor: "created_at" },
+    { label: "Submitted at?", accessor: "_et" },
   ],
   contactForms: [
     { label: "UUID", accessor: "id" },
@@ -41,7 +42,7 @@ const tableHeaders = {
     { label: "Email", accessor: "email" },
     { label: "Phone", accessor: "phone" },
     { label: "Question", accessor: "question" },
-    { label: "Submitted at?", accessor: "created_at" },
+    { label: "Submitted at?", accessor: "_et" },
   ],
 };
 
