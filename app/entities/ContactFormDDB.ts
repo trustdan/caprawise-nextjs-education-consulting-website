@@ -7,7 +7,7 @@ export const ContactFormEntity = new Entity({
     timestamps: true,
     attributes: {
       PK: { partitionKey: true, default: `ContactForm` },
-      SK: { sortKey: true, default: (data:{email:string}) => `BY#${data.email}`, dependsOn: 'email' },
+      SK: { sortKey: true, default: (data:{id:string}) => `ID#${data.id}`, dependsOn: 'id' },
       id: { type: 'string', required: true, default: () => uuidv4()},
       fullName: { type: 'string', required: true },
       email: { type: 'string', required: true },

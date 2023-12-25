@@ -34,7 +34,7 @@ const tableHeaders = {
     { label: "English Proficiency", accessor: "englishProficiency" },
     { label: "TOEFL/IELTS", accessor: "toeflIelts" },
     { label: "Familiar with GRE?", accessor: "gre" },
-    { label: "Submitted at?", accessor: "_et" },
+    { label: "Submitted at?", accessor: "created" },
   ],
   contactForms: [
     { label: "UUID", accessor: "id" },
@@ -42,7 +42,7 @@ const tableHeaders = {
     { label: "Email", accessor: "email" },
     { label: "Phone", accessor: "phone" },
     { label: "Question", accessor: "question" },
-    { label: "Submitted at?", accessor: "_et" },
+    { label: "Submitted at?", accessor: "created" },
   ],
 };
 
@@ -90,7 +90,7 @@ export default function DataRecordsTable(data: DataProps) {
             key={index}
           >
             <Text className="dark:text-gray-300">
-              {header.accessor === "created_at"
+              {header.accessor === "created"
                 ? datum[header.accessor].toString()
                 : datum[header.accessor]}
             </Text>

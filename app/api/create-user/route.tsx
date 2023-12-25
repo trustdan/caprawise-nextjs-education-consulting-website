@@ -26,6 +26,7 @@ export async function POST(request: NextRequest) {
         username: body.username as string,
         password: await bcrypt.hash(body.password, 10),
       }
+      console.log("user data " + user)
 
       const PK = `USER#${user.username}`;
       const SK = 'METADATA';

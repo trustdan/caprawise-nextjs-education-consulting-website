@@ -7,7 +7,7 @@ export const ApplicationFormEntity = new Entity({
     timestamps: true,
     attributes: {
       PK: { partitionKey: true, default:`ApplicationForm` },
-      SK: { sortKey: true, default: (data:{email:string}) => `BY#${data.email}`, dependsOn: 'email' },
+      SK: { sortKey: true, default: (data:{id:string}) => `ID#${data.id}`, dependsOn: 'id' },
       id: { type: 'string', required: true, default: () => uuidv4()},
       package: { type: 'string', required: true },
       programType: { type: 'string', required: true },

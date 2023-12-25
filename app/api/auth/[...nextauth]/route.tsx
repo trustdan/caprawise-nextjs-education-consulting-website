@@ -31,6 +31,7 @@ const handler = NextAuth({
         if (res.ok && user) {
           // If you return an object with contents the user will be authenticated
           console.log("nextauth user found!");
+          console.log(user);
           return user;
         } else {
           // If you return null or false then the credentials will be rejected
