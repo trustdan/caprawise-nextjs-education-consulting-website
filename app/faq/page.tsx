@@ -47,7 +47,7 @@ export default function FAQ() {
         tr: "Sunduğunuz hizmet paketlerinizde kafama takılan bazı noktalar var. Bu konuda daha fazla bilgi almak için size nasıl ulaşabilirim?",
       },
       answer: {
-        en: "You can reach out to us via our contact form on our website or send us an email at info@heliosadmissions.com",
+        en: `You can reach out to us via our contact form on our website or send us an email at ${process.env.COMPANY_INFO_EMAIL as string}`,
         tr: "Web sitemizdeki iletişim formunu kullanarak veya info@heliosadmissions.com adresine e-posta göndererek bizimle iletişime geçebilirsiniz.",
       },
     },

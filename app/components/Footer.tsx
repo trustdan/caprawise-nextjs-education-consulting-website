@@ -67,8 +67,8 @@ export default function Footer() {
       </p>
       <p>
         {language === "en"
-          ? "5929 N Campbell Ave, Chicago, USA"
-          : "5929 N Campbell Ave, Chicago, ABD"}
+          ? "Chicago, USA"
+          : "Chicago, ABD"}
       </p>
     </footer>
   );
