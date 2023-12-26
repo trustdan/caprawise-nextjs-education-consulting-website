@@ -534,7 +534,7 @@ export default function ApplicationForm() {
               }
             : {
                 success:
-                  "Başvurunuz bize ulaştı!\nEn kısa sürede başvurunuzu inceleyip sizinle ileitşime geçeceğiz.",
+                  "Başvurunuz bize ulaştı!\nEn kısa sürede başvurunuzu inceleyip sizinle iletişime geçeceğiz.",
                 failure:
                   "Maalesef başvurunuzu gönderirken bir hata oluştu.\nLütfen daha sonra tekrar deneyiniz...",
               }
