@@ -68,7 +68,7 @@ change.`,
     imageAlt: "Image of Zach Capra - one of the co-founders",
   },
   {
-    name: "Oğuzhan Yangöz",
+    name: "Marie Wise",
     title: {
       en: "Co-founder",
       tr: "",
@@ -77,8 +77,8 @@ change.`,
       en: "",
       tr: "",
     },
-    imagePath: "/oguzhan.webp",
-    imageAlt: "Image of Oğuzhan Yangöz - one of the co-founders",
+    imagePath: "/Marie.jpg",
+    imageAlt: "Image of Marie Wise - one of the co-founders",
   },
 ];
 
